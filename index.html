@@ -2,127 +2,325 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>ONE-TRE | 史上最高の自分へ。| 米子市パーソナルジム</title>
-<meta name="description" content="鳥取県米子市のパーソナルジム ONE-TRE。コアからすべてを創る。心と身体を整える完全個別ジム。">
+<meta name="description" content="鳥取県米子市のパーソナルジム ONE-TRE。コアからすべてを創る。心と身体を整える完全個別ジム。体験セッション受付中。">
+
+<!-- OGP -->
+<meta property="og:title" content="ONE-TRE | 史上最高の自分へ。">
+<meta property="og:description" content="鳥取県米子市のパーソナルジム。体験セッション40分¥3,300受付中。">
+<meta property="og:type" content="website">
+
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-text-size-adjust: 100%; }
-html, body { overflow-x: hidden; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body { overflow-x: hidden; width: 100%; }
 body {
   font-family: "Noto Serif JP", "Times New Roman", "游明朝", "Yu Mincho", serif;
   color: #111;
   background: #fff;
   line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
 
 /* ===== HEADER ===== */
 .header {
   position: fixed; top: 0; left: 0; width: 100%;
-  padding: 16px 24px; z-index: 100;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 0.5px solid #e5e5e5;
+  padding: 14px 20px; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid rgba(0,0,0,0.08);
   display: flex; justify-content: space-between; align-items: center;
 }
-.header__logo { font-size: 14px; letter-spacing: 5px; font-weight: 500; }
-.header__sub { font-size: 10px; letter-spacing: 3px; color: #666; }
+.header__logo { font-size: 13px; letter-spacing: 4px; font-weight: 500; font-family: "Times New Roman", serif; }
+.header__sub { font-size: 9px; letter-spacing: 2px; color: #666; }
 
-/* ===== FIRST VIEW ===== */
+/* ===== FIRST VIEW (スライドショー背景) ===== */
 .fv {
+  position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  padding: 120px 24px 60px;
-  background: #fafafa;
-  text-align: center;
+  padding: 100px 24px 60px;
+  overflow: hidden;
+  background: #1a1a1a;
 }
-.fv__tag { font-size: 11px; letter-spacing: 8px; color: #888; margin-bottom: 32px; font-family: "Times New Roman", serif; }
-.fv__title { font-size: clamp(32px, 7vw, 52px); font-weight: 400; letter-spacing: 3px; line-height: 1.5; margin-bottom: 40px; }
-.fv__line { width: 40px; height: 0.5px; background: #111; margin: 0 auto 32px; }
-.fv__sub { font-size: 14px; letter-spacing: 2px; color: #444; line-height: 2.2; }
-.fv__scroll { margin-top: 80px; font-size: 10px; letter-spacing: 4px; color: #666; }
+.fv__slider {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+}
+.fv__slide {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover; background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  filter: brightness(0.45) blur(3px);
+  transform: scale(1.1);
+}
+.fv__slide.active { opacity: 1; }
+.fv__overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 2;
+}
+.fv__content {
+  position: relative; z-index: 3;
+  text-align: center;
+  color: #fff;
+}
+.fv__tag { font-size: 11px; letter-spacing: 8px; color: rgba(255,255,255,0.8); margin-bottom: 32px; font-family: "Times New Roman", serif; }
+.fv__title { font-size: clamp(32px, 8vw, 56px); font-weight: 400; letter-spacing: 3px; line-height: 1.5; margin-bottom: 40px; color: #fff; }
+.fv__line { width: 40px; height: 0.5px; background: #fff; margin: 0 auto 32px; opacity: 0.6; }
+.fv__sub { font-size: clamp(13px, 3.5vw, 15px); letter-spacing: 2px; color: rgba(255,255,255,0.9); line-height: 2.2; }
+.fv__scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); font-size: 10px; letter-spacing: 4px; color: rgba(255,255,255,0.7); z-index: 3; font-family: "Times New Roman", serif; }
 
 /* ===== SECTION COMMON ===== */
-.section { padding: 80px 24px; }
+.section { padding: 70px 24px; }
 .section__label { font-size: 10px; letter-spacing: 6px; color: #888; text-align: center; margin-bottom: 16px; font-family: "Times New Roman", serif; }
-.section__title { font-size: clamp(24px, 5vw, 32px); font-weight: 400; letter-spacing: 2px; text-align: center; margin-bottom: 16px; }
+.section__title { font-size: clamp(22px, 6vw, 32px); font-weight: 400; letter-spacing: 2px; text-align: center; margin-bottom: 16px; line-height: 1.5; }
 .section__line { width: 30px; height: 0.5px; background: #111; margin: 0 auto 24px; }
-.section__lead { font-size: 14px; line-height: 2.2; color: #444; text-align: center; max-width: 600px; margin: 0 auto; }
+.section__lead { font-size: clamp(13px, 3.5vw, 15px); line-height: 2.2; color: #444; text-align: center; max-width: 600px; margin: 0 auto; }
 
 /* ===== MYPAGE SECTION ===== */
-.mypage { background: #111; color: #fff; padding: 80px 24px; text-align: center; }
+.mypage { background: #111; color: #fff; padding: 70px 24px; text-align: center; }
 .mypage .section__label { color: #888; }
 .mypage .section__title { color: #fff; }
 .mypage .section__line { background: #fff; }
-.mypage__lead { font-size: 13px; line-height: 2.2; color: #ccc; margin: 24px auto 40px; max-width: 500px; }
-.mypage__chart { display: inline-block; padding: 32px; background: #1a1a1a; border: 0.5px solid #333; margin-bottom: 24px; }
-.mypage__note { font-size: 10px; letter-spacing: 2px; color: #666; }
+.mypage__lead { font-size: clamp(13px, 3.5vw, 14px); line-height: 2.2; color: #ccc; margin: 24px auto 40px; max-width: 500px; }
+.mypage__chart { display: inline-block; padding: 32px 20px; background: #1a1a1a; border: 0.5px solid #333; margin-bottom: 32px; max-width: 100%; }
+.mypage__chart svg { max-width: 100%; height: auto; }
 
-/* ===== MENU (FOR WOMEN / MEN) ===== */
+.mypage__desc { max-width: 480px; margin: 0 auto 32px; text-align: left; }
+.mypage__desc-item {
+  padding: 16px 0; border-top: 0.5px solid #333;
+  font-size: clamp(12px, 3.3vw, 14px); color: #ddd; line-height: 1.8;
+}
+.mypage__desc-item:last-child { border-bottom: 0.5px solid #333; }
+.mypage__desc-item strong { color: #fff; font-weight: 500; margin-right: 8px; }
+.mypage__summary {
+  background: #1a1a1a; padding: 20px; margin-top: 24px;
+  text-align: center; font-size: clamp(13px, 3.5vw, 15px); color: #fff; letter-spacing: 2px;
+  border: 0.5px solid #333;
+}
+.mypage__note { font-size: 10px; letter-spacing: 2px; color: #666; margin-top: 24px; }
+
+/* ===== こんな方へ（悩み） ===== */
+.concern { background: #fafafa; padding: 70px 24px; }
+.concern__tabs {
+  max-width: 520px; margin: 32px auto 0;
+}
+.concern__group {
+  background: #fff; padding: 32px 24px; margin-bottom: 20px;
+  border: 0.5px solid #e5e5e5;
+}
+.concern__group--men { background: #111; color: #fff; border-color: #111; }
+.concern__group-title {
+  font-size: 11px; letter-spacing: 6px; color: #888; text-align: center;
+  margin-bottom: 8px; font-family: "Times New Roman", serif;
+}
+.concern__group--men .concern__group-title { color: #aaa; }
+.concern__group-sub {
+  font-size: clamp(16px, 4.5vw, 20px); letter-spacing: 2px; text-align: center;
+  margin-bottom: 24px; font-weight: 400;
+}
+.concern__list { list-style: none; }
+.concern__item {
+  padding: 14px 0; font-size: clamp(12px, 3.3vw, 14px); line-height: 1.7;
+  border-top: 0.5px solid #eee;
+  padding-left: 20px; position: relative;
+}
+.concern__group--men .concern__item { border-top-color: #333; color: #ddd; }
+.concern__item:first-child { border-top: none; }
+.concern__item::before {
+  content: ""; position: absolute; left: 0; top: 22px;
+  width: 8px; height: 0.5px; background: #999;
+}
+.concern__group--men .concern__item::before { background: #666; }
+
+/* ===== MENU (CORE BEAUTY / CORE BUILD) ===== */
 .menu { max-width: 420px; margin: 32px auto 0; }
 .menu__item {
   padding: 18px 0; border-top: 0.5px solid #e5e5e5;
-  font-size: 13px; display: flex; justify-content: space-between; align-items: center;
+  font-size: clamp(13px, 3.5vw, 14px);
+  text-align: center;
 }
 .menu__item:last-child { border-bottom: 0.5px solid #e5e5e5; }
 .menu--dark .menu__item { border-top-color: #333; color: #ddd; }
 .menu--dark .menu__item:last-child { border-bottom-color: #333; }
-.menu__arrow { color: #999; font-family: "Times New Roman", serif; }
 
-/* ===== PRICE ===== */
+/* ===== 施設紹介 ===== */
+.facility { background: #fff; padding: 70px 24px; }
+.facility__grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 520px; margin: 40px auto 0;
+}
+.facility__img {
+  width: 100%; height: 240px;
+  background-size: cover; background-position: center;
+  background-color: #eee;
+}
+
+/* ===== 料金 ===== */
 .price { background: #fafafa; }
 .price__note { font-size: 11px; color: #666; text-align: center; margin-top: 12px; }
 .price__list { max-width: 440px; margin: 40px auto 0; }
 .price__card {
-  background: #fff; padding: 24px; margin-bottom: 12px;
+  background: #fff; padding: 22px; margin-bottom: 12px;
   border: 0.5px solid #e5e5e5;
   display: flex; justify-content: space-between; align-items: baseline;
+  position: relative;
 }
-.price__card--dark { background: #111; color: #fff; border-color: #111; }
-.price__card--dark .price__count { color: #aaa; }
-.price__card--dark .price__per { color: #888; }
-.price__count { font-size: 13px; color: #666; }
-.price__amount { font-family: "Times New Roman", serif; font-size: 24px; font-weight: 400; }
+.price__card--recommend {
+  background: #111; color: #fff; border-color: #111;
+}
+.price__badge {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  background: #c9a961; color: #fff; font-size: 10px; letter-spacing: 2px;
+  padding: 4px 16px; font-family: "Times New Roman", serif;
+}
+.price__card--recommend .price__count { color: #aaa; }
+.price__card--recommend .price__per { color: #888; }
+.price__count { font-size: clamp(12px, 3.3vw, 13px); color: #666; }
+.price__amount { font-family: "Times New Roman", serif; font-size: clamp(20px, 5.5vw, 24px); font-weight: 400; }
 .price__per { font-size: 10px; color: #999; }
 .price__card-inner { display: flex; flex-direction: column; align-items: flex-end; }
-.price__entry { font-size: 11px; color: #888; text-align: center; margin-top: 20px; }
+.price__entry {
+  margin-top: 20px; text-align: center;
+  font-size: 11px; color: #666;
+}
+.price__entry-strike {
+  text-decoration: line-through; color: #999; margin-right: 8px;
+}
+.price__entry-free {
+  color: #c9a961; font-weight: 500; font-size: 12px;
+}
+.price__payment {
+  margin-top: 32px; padding: 20px; background: #fff; border: 0.5px solid #e5e5e5;
+  text-align: center;
+}
+.price__payment-label { font-size: 10px; letter-spacing: 3px; color: #888; margin-bottom: 8px; font-family: "Times New Roman", serif; }
+.price__payment-list {
+  font-size: clamp(11px, 3vw, 12px); color: #444; letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ===== 体験セッション ===== */
+.trial {
+  background: #111; color: #fff; padding: 70px 24px; text-align: center;
+}
+.trial .section__label { color: #888; }
+.trial .section__title { color: #fff; }
+.trial .section__line { background: #fff; }
+.trial__price {
+  font-family: "Times New Roman", serif; font-size: clamp(28px, 8vw, 40px);
+  margin: 24px 0 8px; letter-spacing: 2px;
+}
+.trial__detail { font-size: clamp(12px, 3.3vw, 13px); color: #aaa; margin-bottom: 32px; }
+.trial__btn {
+  display: inline-block; padding: 18px 40px;
+  background: #fff; color: #111; font-size: clamp(12px, 3.5vw, 14px);
+  letter-spacing: 3px; font-weight: 500; font-family: "Noto Serif JP", serif;
+  transition: opacity 0.3s;
+}
+.trial__btn:hover { opacity: 0.8; }
+
+/* ===== お客様の声 ===== */
+.voice { background: #fff; padding: 70px 24px; }
+.voice__list { max-width: 560px; margin: 40px auto 0; }
+.voice__card {
+  background: #fafafa; padding: 28px 24px; margin-bottom: 16px;
+  border: 0.5px solid #eee;
+}
+.voice__head {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+}
+.voice__icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #e5e5e5;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Times New Roman", serif; font-size: 14px; color: #666;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+.voice__name {
+  font-size: clamp(12px, 3.3vw, 13px); color: #444; letter-spacing: 1px;
+}
+.voice__text {
+  font-size: clamp(13px, 3.5vw, 14px); line-height: 2; color: #333;
+}
 
 /* ===== MISSION ===== */
-.mission { text-align: center; padding: 80px 24px; background: #fff; }
-.mission__title { font-size: clamp(18px, 4vw, 22px); font-weight: 400; letter-spacing: 1px; margin-bottom: 24px; line-height: 1.8; }
-.mission__text { font-size: 13px; line-height: 2.2; color: #555; max-width: 480px; margin: 0 auto; }
+.mission { text-align: center; padding: 70px 24px; background: #fff; }
+.mission__title {
+  font-size: clamp(18px, 5vw, 24px); font-weight: 400;
+  letter-spacing: 1px; margin-bottom: 24px; line-height: 1.8;
+}
+.mission__text {
+  font-size: clamp(13px, 3.5vw, 15px); line-height: 2.2;
+  color: #555; max-width: 480px; margin: 0 auto;
+  letter-spacing: 2px;
+}
 
 /* ===== CTA ===== */
-.cta { background: #111; color: #fff; text-align: center; padding: 80px 24px; }
+.cta { background: #111; color: #fff; text-align: center; padding: 70px 24px; }
 .cta .section__label { color: #888; }
 .cta .section__title { color: #fff; }
-.cta__sub { font-size: 12px; color: #aaa; margin-bottom: 40px; }
-.cta__qr-wrap { display: inline-block; padding: 24px; background: #fff; margin-bottom: 16px; }
-.cta__qr { width: 160px; height: 160px; }
-.cta__id { font-size: 11px; color: #888; letter-spacing: 1px; font-family: "Times New Roman", serif; }
-.cta__line-btn {
-  display: inline-block; margin-top: 24px; padding: 16px 48px;
-  background: #06C755; color: #fff; font-size: 14px; letter-spacing: 2px;
-  font-weight: 500; border-radius: 4px;
+.cta .section__line { background: #fff; }
+.cta__sub { font-size: clamp(12px, 3.3vw, 13px); color: #aaa; margin-bottom: 32px; }
+.cta__qr-wrap {
+  display: inline-block; padding: 20px; background: #fff; margin-bottom: 12px;
 }
-.cta__address { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid #333; font-size: 10px; letter-spacing: 2px; color: #888; line-height: 2; }
+.cta__qr { width: clamp(140px, 40vw, 180px); height: clamp(140px, 40vw, 180px); display: block; }
+.cta__id {
+  font-size: 11px; color: #888; letter-spacing: 1px;
+  font-family: "Times News Roman", serif; margin-bottom: 24px;
+}
+.cta__line-btn {
+  display: inline-block; margin-top: 8px; padding: 16px 40px;
+  background: #06C755; color: #fff; font-size: clamp(13px, 3.5vw, 14px);
+  letter-spacing: 2px; font-weight: 500; border-radius: 4px;
+  font-family: "Noto Serif JP", serif;
+  transition: opacity 0.3s;
+}
+.cta__line-btn:hover { opacity: 0.9; }
+
+/* ===== SNS ===== */
+.sns {
+  background: #fff; padding: 50px 24px; text-align: center;
+}
+.sns__label { font-size: 10px; letter-spacing: 6px; color: #888; margin-bottom: 20px; font-family: "Times New Roman", serif; }
+.sns__link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: clamp(13px, 3.5vw, 14px); letter-spacing: 2px;
+  padding: 14px 28px; border: 0.5px solid #111;
+  transition: all 0.3s;
+}
+.sns__link:hover { background: #111; color: #fff; }
+.sns__icon { width: 18px; height: 18px; }
 
 /* ===== FOOTER ===== */
-.footer { background: #000; color: #666; text-align: center; padding: 32px 24px; font-size: 10px; letter-spacing: 2px; }
+.footer {
+  background: #000; color: #666; text-align: center;
+  padding: 32px 24px; font-size: 10px; letter-spacing: 2px; line-height: 2;
+}
+.footer__address { margin-bottom: 16px; color: #888; }
 
 /* ===== RESPONSIVE ===== */
 @media (min-width: 768px) {
-  .section { padding: 120px 32px; }
-  .fv { padding: 140px 32px 80px; }
-  .header { padding: 20px 40px; }
-  .fv__title { letter-spacing: 4px; }
+  .section { padding: 100px 32px; }
+  .header { padding: 18px 40px; }
+  .header__logo { font-size: 15px; letter-spacing: 5px; }
+  .header__sub { font-size: 10px; letter-spacing: 3px; }
+  .facility__grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; }
+  .facility__img { height: 280px; }
 }
 
 @media (min-width: 1024px) {
-  .section { padding: 140px 40px; }
-  .fv__title { font-size: 56px; }
+  .section { padding: 120px 40px; }
   .menu { max-width: 520px; }
   .price__list { max-width: 520px; }
 }
@@ -136,12 +334,21 @@ a { color: inherit; text-decoration: none; }
   <div class="header__sub">YONAGO / TOTTORI</div>
 </header>
 
-<!-- FIRST VIEW -->
+<!-- FIRST VIEW with slideshow -->
 <section class="fv">
-  <p class="fv__tag">CREATE YOUR BEST SELF</p>
-  <h1 class="fv__title">史上最高の<br>自分へ。</h1>
-  <div class="fv__line"></div>
-  <p class="fv__sub">コアから、すべてを創る。<br>心と身体を整える完全個別ジム</p>
+  <div class="fv__slider">
+    <div class="fv__slide active" id="slide1"></div>
+    <div class="fv__slide" id="slide2"></div>
+    <div class="fv__slide" id="slide3"></div>
+  </div>
+  <div class="fv__overlay"></div>
+
+  <div class="fv__content">
+    <p class="fv__tag">CREATE YOUR BEST SELF</p>
+    <h1 class="fv__title">史上最高の<br>自分へ。</h1>
+    <div class="fv__line"></div>
+    <p class="fv__sub">コアから、すべてを創る。<br>心と身体を整える完全個別ジム</p>
+  </div>
   <p class="fv__scroll">SCROLL ↓</p>
 </section>
 
@@ -153,20 +360,66 @@ a { color: inherit; text-decoration: none; }
   <p class="mypage__lead">筋力・体幹・連動性・柔軟性。<br>あなたの身体を4軸で可視化し、<br>理想の100点へ徐々に近づけていく。</p>
 
   <div class="mypage__chart">
-    <svg width="200" height="200" viewBox="0 0 200 200">
-      <polygon points="100,20 180,100 100,180 20,100" fill="none" stroke="#444" stroke-dasharray="3,3" />
-      <polygon points="100,50 140,100 100,170 65,100" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.5" />
-      <circle cx="100" cy="50" r="5" fill="#fff" />
-      <circle cx="140" cy="100" r="5" fill="#fff" />
-      <circle cx="100" cy="170" r="5" fill="#fff" />
-      <circle cx="65" cy="100" r="5" fill="#fff" />
-      <text x="100" y="12" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">筋力</text>
-      <text x="192" y="104" text-anchor="start" fill="#aaa" font-size="10" font-family="sans-serif">体幹</text>
-      <text x="100" y="196" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">連動性</text>
-      <text x="8" y="104" text-anchor="end" fill="#aaa" font-size="10" font-family="sans-serif">柔軟性</text>
+    <svg width="260" height="280" viewBox="0 0 260 280" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="130,60 220,140 130,220 40,140" fill="none" stroke="#555" stroke-dasharray="3,3" />
+      <polygon points="130,90 180,140 130,210 80,140" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.5" />
+      <circle cx="130" cy="90" r="5" fill="#fff" />
+      <circle cx="180" cy="140" r="5" fill="#fff" />
+      <circle cx="130" cy="210" r="5" fill="#fff" />
+      <circle cx="80" cy="140" r="5" fill="#fff" />
+      <text x="130" y="48" text-anchor="middle" fill="#ccc" font-size="12" font-family="sans-serif">筋力</text>
+      <text x="230" y="145" text-anchor="start" fill="#ccc" font-size="12" font-family="sans-serif">体幹</text>
+      <text x="130" y="245" text-anchor="middle" fill="#ccc" font-size="12" font-family="sans-serif">連動性</text>
+      <text x="30" y="145" text-anchor="end" fill="#ccc" font-size="12" font-family="sans-serif">柔軟性</text>
     </svg>
   </div>
+
+  <div class="mypage__desc">
+    <div class="mypage__desc-item"><strong>筋力</strong>＝力を出す能力</div>
+    <div class="mypage__desc-item"><strong>体幹</strong>＝力を安定させる土台</div>
+    <div class="mypage__desc-item"><strong>連動性</strong>＝力をつなげて伝える能力</div>
+    <div class="mypage__desc-item"><strong>柔軟性</strong>＝可動域を広げて無駄なく動く能力</div>
+  </div>
+  <div class="mypage__summary">動きの質を決める、4要素。</div>
+
   <p class="mypage__note">※ 米子で唯一のオーダーメイド分析システム</p>
+</section>
+
+<!-- こんな方へ -->
+<section class="concern">
+  <p class="section__label">FOR YOU</p>
+  <h2 class="section__title">こんな方へ</h2>
+  <div class="section__line"></div>
+
+  <div class="concern__tabs">
+    <!-- 女性向け -->
+    <div class="concern__group">
+      <p class="concern__group-title">FOR WOMEN</p>
+      <h3 class="concern__group-sub">女性のお悩み</h3>
+      <ul class="concern__list">
+        <li class="concern__item">運動したいけど、どうやってしたらいいかわからない</li>
+        <li class="concern__item">ジムに行っても続かなかった</li>
+        <li class="concern__item">お腹・下半身がなかなか痩せない</li>
+        <li class="concern__item">体力がなくて、すぐに疲れる</li>
+        <li class="concern__item">変わりたいと思いながらも、何もできていない</li>
+      </ul>
+    </div>
+
+    <!-- 男性向け -->
+    <div class="concern__group concern__group--men">
+      <p class="concern__group-title">FOR MEN</p>
+      <h3 class="concern__group-sub">男性のお悩み</h3>
+      <ul class="concern__list">
+        <li class="concern__item">最近お腹が出てきて危機感がある</li>
+        <li class="concern__item">短時間で効率よく体を鍛えたい</li>
+        <li class="concern__item">ただ痩せるだけでなく、カッコいい体を作りたい</li>
+        <li class="concern__item">1人だとトレーニングが続かない</li>
+        <li class="concern__item">昔より体力の低下を感じている</li>
+        <li class="concern__item">運動初心者でも安心して始めたい</li>
+        <li class="concern__item">自信をつけたい</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- FOR WOMEN -->
@@ -174,13 +427,13 @@ a { color: inherit; text-decoration: none; }
   <p class="section__label">FOR WOMEN</p>
   <h2 class="section__title">CORE BEAUTY</h2>
   <div class="section__line"></div>
-  <p class="section__lead">しなやかに、整える。</p>
+  <p class="section__lead">しなやかな、良い身体を創る。</p>
 
   <div class="menu">
-    <div class="menu__item"><span>姿勢改善・美しい立ち姿</span><span class="menu__arrow">→</span></div>
-    <div class="menu__item"><span>くびれ・ボディライン</span><span class="menu__arrow">→</span></div>
-    <div class="menu__item"><span>疲れにくい身体づくり</span><span class="menu__arrow">→</span></div>
-    <div class="menu__item"><span>メンタルコーチング</span><span class="menu__arrow">→</span></div>
+    <div class="menu__item">姿勢改善・美しい立ち姿</div>
+    <div class="menu__item">くびれ・ボディライン</div>
+    <div class="menu__item">疲れにくい身体づくり</div>
+    <div class="menu__item">使える身体づくり</div>
   </div>
 </section>
 
@@ -192,14 +445,28 @@ a { color: inherit; text-decoration: none; }
   <p class="mypage__lead">力強く、創り上げる。</p>
 
   <div class="menu menu--dark">
-    <div class="menu__item"><span>ボクシング×体幹トレーニング</span><span class="menu__arrow">→</span></div>
-    <div class="menu__item"><span>姿勢・動作改善</span><span class="menu__arrow">→</span></div>
-    <div class="menu__item"><span>使える身体づくり</span><span class="menu__arrow">→</span></div>
-    <div class="menu__item"><span>補助金申請サポート</span><span class="menu__arrow">→</span></div>
+    <div class="menu__item">ブレない身体を創る</div>
+    <div class="menu__item">姿勢・動作改善</div>
+    <div class="menu__item">痛くない身体づくり</div>
+    <div class="menu__item">使える身体づくり</div>
   </div>
 </section>
 
-<!-- PRICE -->
+<!-- 施設紹介 -->
+<section class="facility">
+  <p class="section__label">FACILITY</p>
+  <h2 class="section__title">施設紹介</h2>
+  <div class="section__line"></div>
+  <p class="section__lead">未来の自分を創る、秘密基地。</p>
+
+  <div class="facility__grid">
+    <div class="facility__img" id="fac1"></div>
+    <div class="facility__img" id="fac2"></div>
+    <div class="facility__img" id="fac3"></div>
+  </div>
+</section>
+
+<!-- 料金 -->
 <section class="section price">
   <p class="section__label">PRICE</p>
   <h2 class="section__title">料金</h2>
@@ -214,30 +481,81 @@ a { color: inherit; text-decoration: none; }
         <span class="price__per">1回あたり ¥6,225</span>
       </div>
     </div>
-    <div class="price__card">
+    <div class="price__card price__card--recommend">
+      <span class="price__badge">RECOMMEND</span>
       <span class="price__count">16回</span>
       <div class="price__card-inner">
         <span class="price__amount">¥94,800</span>
         <span class="price__per">1回あたり ¥5,925</span>
       </div>
     </div>
-    <div class="price__card price__card--dark">
-      <span class="price__count">32回（おすすめ）</span>
+    <div class="price__card">
+      <span class="price__count">32回</span>
       <div class="price__card-inner">
         <span class="price__amount">¥178,000</span>
         <span class="price__per">1回あたり ¥5,563</span>
       </div>
     </div>
-    <p class="price__entry">※ 別途 入会金 ¥11,000</p>
+    <p class="price__entry">
+      入会金 <span class="price__entry-strike">¥11,000</span><span class="price__entry-free">今なら0円</span>
+    </p>
+
+    <div class="price__payment">
+      <p class="price__payment-label">PAYMENT</p>
+      <p class="price__payment-list">VISA / Master / JCB / AMEX / PayPay</p>
+    </div>
+  </div>
+</section>
+
+<!-- 体験セッション -->
+<section class="trial">
+  <p class="section__label">TRIAL</p>
+  <h2 class="section__title">まずは体験セッション。</h2>
+  <div class="section__line"></div>
+  <p class="trial__price">¥3,300</p>
+  <p class="trial__detail">40分 / お一人様1回限り</p>
+  <a href="https://onebalanceyume-beep.github.io/private-gym-trainer/taiken_yoyaku.html" class="trial__btn" target="_blank" rel="noopener">体験を予約する →</a>
+</section>
+
+<!-- お客様の声 -->
+<section class="voice">
+  <p class="section__label">VOICE</p>
+  <h2 class="section__title">お客様の声</h2>
+  <div class="section__line"></div>
+
+  <div class="voice__list">
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">M.Y</div>
+        <div class="voice__name">40代 女性</div>
+      </div>
+      <p class="voice__text">交通事故から肩がすごく痛かったけど、トレーニング始めてから全く痛くなくなりました。</p>
+    </div>
+
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">M.M</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">今まで1人でトレーニングしていたけど、トレーナーに診てもらうことで初めて正しいフォームを教えてもらって、めちゃめちゃ効果絶大でした！</p>
+    </div>
+
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">C.H</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">腰が結構痛かったんですが、トレーニングしていくとこんなに痛くなくなっていくのは、びっくりでした。</p>
+    </div>
   </div>
 </section>
 
 <!-- MISSION -->
 <section class="mission">
   <p class="section__label">OUR MISSION</p>
-  <h2 class="mission__title">鍛えるたびに、<br>誰かの未来が変わる。</h2>
+  <h2 class="mission__title">鍛えるたびに、<br>自分の未来が変わる。</h2>
   <div class="section__line"></div>
-  <p class="mission__text">ONE-TREは、売上の一部を<br>児童養護施設の支援に還元しています。<br>あなたの一歩が、子どもたちの一歩になる。</p>
+  <p class="mission__text">自分を、より好きになる。</p>
 </section>
 
 <!-- CTA -->
@@ -248,26 +566,63 @@ a { color: inherit; text-decoration: none; }
   <p class="cta__sub">無料カウンセリング受付中</p>
 
   <div class="cta__qr-wrap">
-    <!-- QRコード画像はここに差し替え -->
-    <div class="cta__qr" style="background:#f0f0f0; display:flex; align-items:center; justify-content:center; color:#999; font-size:11px;">[ LINE QR ]</div>
+    <img src="qr.png" alt="LINE公式QRコード" class="cta__qr" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="cta__qr" style="display:none; background:#f0f0f0; align-items:center; justify-content:center; color:#999; font-size:11px;">[ LINE QR ]</div>
   </div>
   <p class="cta__id">@one-tre</p>
 
-  <div>
-    <a href="https://line.me/" class="cta__line-btn">LINEで相談する</a>
-  </div>
+  <a href="#" class="cta__line-btn" id="lineBtn">LINEで相談する</a>
+</section>
 
-  <div class="cta__address">
-    〒683-0853<br>
-    鳥取県米子市車尾6丁目8-59<br>
-    ONE-TRE
-  </div>
+<!-- SNS -->
+<section class="sns">
+  <p class="sns__label">FOLLOW US</p>
+  <a href="https://www.instagram.com/personal_one_tre?igsh=d2Y3YThvYjFrN2tj&utm_source=qr" class="sns__link" target="_blank" rel="noopener">
+    <svg class="sns__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+    </svg>
+    @personal_one_tre
+  </a>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
+  <div class="footer__address">
+    〒683-0853<br>
+    鳥取県米子市車尾6丁目8-59
+  </div>
   © ONE-TRE. All rights reserved.
 </footer>
+
+<script>
+// スライドショー
+(function() {
+  const slides = [
+    document.getElementById('slide1'),
+    document.getElementById('slide2'),
+    document.getElementById('slide3')
+  ];
+
+  // 施設写真をファーストビューと施設紹介セクションにセット
+  const images = ['facility1.jpg', 'facility2.jpg', 'facility3.jpg'];
+  slides[0].style.backgroundImage = `url(${images[0]})`;
+  slides[1].style.backgroundImage = `url(${images[1]})`;
+  slides[2].style.backgroundImage = `url(${images[2]})`;
+
+  document.getElementById('fac1').style.backgroundImage = `url(${images[0]})`;
+  document.getElementById('fac2').style.backgroundImage = `url(${images[1]})`;
+  document.getElementById('fac3').style.backgroundImage = `url(${images[2]})`;
+
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+})();
+</script>
 
 </body>
 </html>
