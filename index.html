@@ -12,10 +12,14 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 html, body { overflow-x: hidden; width: 100%; }
 body {
   font-family: "Noto Serif JP", "Times New Roman", "游明朝", "Yu Mincho", serif;
-  color: #222; background: #fff; line-height: 1.8; font-size: 16px;
+  color: #222; background: #fff; line-height: 1.9; font-size: 16px;
+  word-break: auto-phrase;
+  overflow-wrap: break-word;
+  line-break: strict;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
+p { line-break: strict; }
 
 :root {
   --pink-light: #fdf4f7;
@@ -95,8 +99,9 @@ a { color: inherit; text-decoration: none; }
 .why { background: #fff; padding: 80px 24px; }
 .why__intro {
   max-width: 600px; margin: 32px auto 48px;
-  font-size: clamp(13px, 3.5vw, 15px); line-height: 2.2; color: #444;
+  font-size: clamp(13px, 3.5vw, 15px); line-height: 2.4; color: #444;
   text-align: center;
+  word-break: auto-phrase;
 }
 .why__profile {
   max-width: 720px; margin: 0 auto;
@@ -122,7 +127,7 @@ a { color: inherit; text-decoration: none; }
 }
 .why__achievement-list { list-style: none; }
 .why__achievement-item {
-  padding: 12px 0; font-size: clamp(12px, 3.2vw, 13px); line-height: 1.7;
+  padding: 12px 0; font-size: clamp(12px, 3.2vw, 13px); line-height: 1.8;
   border-bottom: 0.5px solid #e5e5e5;
   display: flex; gap: 12px;
 }
@@ -137,7 +142,7 @@ a { color: inherit; text-decoration: none; }
 }
 .why__qualifications {
   max-width: 440px; margin: 16px auto 0; padding: 16px 24px;
-  font-size: 11px; color: #666; text-align: center; letter-spacing: 1px; line-height: 1.8;
+  font-size: 11px; color: #666; text-align: center; letter-spacing: 1px; line-height: 1.9;
   border-top: 0.5px solid #e5e5e5;
 }
 .why__qualifications-label {
@@ -157,15 +162,18 @@ a { color: inherit; text-decoration: none; }
 .why__strength-title {
   font-size: clamp(16px, 4.5vw, 20px); font-weight: 400;
   letter-spacing: 2px; margin-bottom: 20px; line-height: 1.7;
+  word-break: auto-phrase;
 }
 .why__strength-text {
-  font-size: clamp(13px, 3.5vw, 14px); line-height: 2.2; color: #444;
+  font-size: clamp(13px, 3.5vw, 14px); line-height: 2.4; color: #444;
+  word-break: auto-phrase;
 }
 .why__staff {
-  max-width: 520px; margin: 32px auto 0;
+  max-width: 580px; margin: 32px auto 0;
   text-align: center; padding: 20px;
-  font-size: clamp(12px, 3.3vw, 13px); line-height: 2; color: #555;
+  font-size: clamp(12px, 3.3vw, 13px); line-height: 2.2; color: #555;
   border-top: 0.5px solid #e5e5e5;
+  word-break: auto-phrase;
 }
 
 .stages { background: var(--bg-soft); padding: 70px 24px; }
@@ -188,7 +196,8 @@ a { color: inherit; text-decoration: none; }
   background: #fff;
   border-left: 3px solid var(--gold);
   font-size: clamp(13px, 3.5vw, 14px);
-  line-height: 2; color: #333; text-align: center;
+  line-height: 2.2; color: #333; text-align: center;
+  word-break: auto-phrase;
 }
 
 .concern { background: var(--bg-soft); padding: 70px 24px; }
@@ -378,6 +387,7 @@ a { color: inherit; text-decoration: none; }
   <div class="header__sub">YONAGO / TOTTORI</div>
 </header>
 
+<!-- ===== 1. FV ===== -->
 <section class="fv">
   <div class="fv__slider">
     <div class="fv__slide active" id="slide1"></div>
@@ -395,46 +405,13 @@ a { color: inherit; text-decoration: none; }
   <p class="fv__scroll">SCROLL ↓</p>
 </section>
 
-<section class="mypage">
-  <p class="section__label">ONLY AT ONE-TRE</p>
-  <h2 class="section__title">あなた専用のマイページ。</h2>
-  <div class="section__line"></div>
-  <p class="mypage__lead">筋力・体幹・連動性・柔軟性。<br>あなたの身体を4軸で可視化し、<br>理想の100点へ徐々に近づけていく。</p>
-
-  <div class="mypage__chart">
-    <svg width="280" height="300" viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="140,70 230,150 140,230 50,150" fill="none" stroke="#555" stroke-dasharray="3,3" />
-      <polygon points="140,88 185,155 140,205 75,150" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.5" />
-      <circle cx="140" cy="88" r="5" fill="#fff" />
-      <circle cx="185" cy="155" r="5" fill="#fff" />
-      <circle cx="140" cy="205" r="5" fill="#fff" />
-      <circle cx="75" cy="150" r="5" fill="#fff" />
-      <text x="140" y="55" text-anchor="middle" fill="#ccc" font-size="12" font-family="sans-serif">筋力</text>
-      <text x="245" y="155" text-anchor="start" fill="#ccc" font-size="12" font-family="sans-serif">体幹</text>
-      <text x="140" y="260" text-anchor="middle" fill="#ccc" font-size="12" font-family="sans-serif">連動性</text>
-      <text x="35" y="155" text-anchor="end" fill="#ccc" font-size="12" font-family="sans-serif">柔軟性</text>
-    </svg>
-  </div>
-
-  <div class="mypage__desc">
-    <div class="mypage__desc-item"><strong>筋力</strong>＝力を出す能力</div>
-    <div class="mypage__desc-item"><strong>体幹</strong>＝力を安定させる土台</div>
-    <div class="mypage__desc-item"><strong>連動性</strong>＝力をつなげて伝える能力</div>
-    <div class="mypage__desc-item"><strong>柔軟性</strong>＝可動域を広げて無駄なく動く能力</div>
-  </div>
-  <div class="mypage__summary">動きの質を決める、4要素。</div>
-  <p class="mypage__note">※ 日本で唯一のオーダーメイド分析システム</p>
-</section>
-
-<!-- WHY ONE-TRE -->
+<!-- ===== 2. WHY ONE-TRE（代表・実績で信頼獲得） ===== -->
 <section class="why">
   <p class="section__label">WHY ONE-TRE</p>
   <h2 class="section__title">ボクシングジム運営<br>だからこそ、できること。</h2>
   <div class="section__line"></div>
   <p class="why__intro">
-    鍛えるだけでは、本当の身体は創れない。<br>
-    ONE-TREは、ボクシングジム運営の専門性を活かし、<br>
-    "身体がどう動くか"まで見ながら、筋肉を創ります。
+    鍛えるだけでは、本当の身体は創れない。ONE-TREは、ボクシングジム運営の専門性を活かし、"身体がどう動くか"まで見ながら、筋肉を創ります。
   </p>
 
   <div class="why__profile">
@@ -468,7 +445,7 @@ a { color: inherit; text-decoration: none; }
         </ul>
         <div class="why__qualifications">
           <span class="why__qualifications-label">QUALIFICATIONS</span>
-          Essential Coaching 認定<br>
+          Essential Coaching 講師<br>
           DiSC®アセスメント認定講師
         </div>
       </div>
@@ -479,52 +456,48 @@ a { color: inherit; text-decoration: none; }
     <p class="why__strength-label">ONE-TRE'S STRENGTH</p>
     <h3 class="why__strength-title">全身が連動する、本物の身体づくり。</h3>
     <p class="why__strength-text">
-      ボクシングは、全身を連動させるスポーツ。<br>
-      だからこそ、局所的な筋トレでは得られない、<br>
-      機能的で、痛みのない身体を創ることができます。
+      ボクシングは、全身を連動させるスポーツ。だからこそ、局所的な筋トレでは得られない、機能的で、痛みのない身体を創ることができます。
     </p>
   </div>
 
   <div class="why__staff">
-    代表監修のもと、<br>
-    <strong style="color: var(--gold-dark); font-weight:500;">専任トレーナーが、あなたの身体をサポートいたします。</strong>
+    代表監修のもと、専任トレーナーが、<br>あなたの身体を<strong style="color: var(--gold-dark); font-weight:500;">しっかりサポートいたします。</strong>
   </div>
 </section>
 
-<section class="stages">
-  <p class="section__label">3 STAGES</p>
-  <h2 class="section__title">3つのステージ</h2>
+<!-- ===== 3. マイページ差別化（独自性） ===== -->
+<section class="mypage">
+  <p class="section__label">ONLY AT ONE-TRE</p>
+  <h2 class="section__title">あなた専用のマイページ。</h2>
   <div class="section__line"></div>
-  <p class="section__lead">段階的に、確実に。<br>あなたの身体は、3つのステージを経て、<br>理想へ近づきます。</p>
+  <p class="mypage__lead">筋力・体幹・連動性・柔軟性。<br>あなたの身体を4軸で可視化し、<br>理想の100点へ徐々に近づけていく。</p>
 
-  <div class="stages__grid">
-    <div class="stages__card">
-      <p class="stages__num-label">STAGE</p>
-      <div class="stages__num">01</div>
-      <h3 class="stages__title">痛みのない身体へ</h3>
-      <p class="stages__desc">まずはベース作り。<br>どこも痛くない、快適な身体を整えます。</p>
-    </div>
-    <div class="stages__card">
-      <p class="stages__num-label">STAGE</p>
-      <div class="stages__num">02</div>
-      <h3 class="stages__title">使える身体へ</h3>
-      <p class="stages__desc">日常動作が楽になり、<br>疲れにくい機能的な身体を創ります。</p>
-    </div>
-    <div class="stages__card">
-      <p class="stages__num-label">STAGE</p>
-      <div class="stages__num">03</div>
-      <h3 class="stages__title">理想の身体へ</h3>
-      <p class="stages__desc">あなたが目指す、<br>なりたい身体を一緒に創り上げます。</p>
-    </div>
+  <div class="mypage__chart">
+    <svg width="280" height="300" viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="140,70 230,150 140,230 50,150" fill="none" stroke="#555" stroke-dasharray="3,3" />
+      <polygon points="140,88 185,155 140,205 75,150" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.5" />
+      <circle cx="140" cy="88" r="5" fill="#fff" />
+      <circle cx="185" cy="155" r="5" fill="#fff" />
+      <circle cx="140" cy="205" r="5" fill="#fff" />
+      <circle cx="75" cy="150" r="5" fill="#fff" />
+      <text x="140" y="55" text-anchor="middle" fill="#ccc" font-size="12" font-family="sans-serif">筋力</text>
+      <text x="245" y="155" text-anchor="start" fill="#ccc" font-size="12" font-family="sans-serif">体幹</text>
+      <text x="140" y="260" text-anchor="middle" fill="#ccc" font-size="12" font-family="sans-serif">連動性</text>
+      <text x="35" y="155" text-anchor="end" fill="#ccc" font-size="12" font-family="sans-serif">柔軟性</text>
+    </svg>
   </div>
 
-  <div class="stages__message">
-    焦らなくて大丈夫です。<br>
-    トレーナーがしっかり見ながら、バランスを整えていきます。<br>
-    <strong style="color: var(--gold-dark);">あなたのペースで、一歩ずつ。</strong>
+  <div class="mypage__desc">
+    <div class="mypage__desc-item"><strong>筋力</strong>＝力を出す能力</div>
+    <div class="mypage__desc-item"><strong>体幹</strong>＝力を安定させる土台</div>
+    <div class="mypage__desc-item"><strong>連動性</strong>＝力をつなげて伝える能力</div>
+    <div class="mypage__desc-item"><strong>柔軟性</strong>＝可動域を広げて無駄なく動く能力</div>
   </div>
+  <div class="mypage__summary">動きの質を決める、4要素。</div>
+  <p class="mypage__note">※ 日本で唯一のオーダーメイド分析システム</p>
 </section>
 
+<!-- ===== 4. こんな方へ（共感） ===== -->
 <section class="concern">
   <p class="section__label">FOR YOU</p>
   <h2 class="section__title">こんな方へ</h2>
@@ -559,6 +532,41 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+<!-- ===== 5. 3ステージ（方法論・安心感） ===== -->
+<section class="stages">
+  <p class="section__label">3 STAGES</p>
+  <h2 class="section__title">3つのステージ</h2>
+  <div class="section__line"></div>
+  <p class="section__lead">段階的に、確実に。<br>あなたの身体は3つのステージを経て、理想へ近づきます。</p>
+
+  <div class="stages__grid">
+    <div class="stages__card">
+      <p class="stages__num-label">STAGE</p>
+      <div class="stages__num">01</div>
+      <h3 class="stages__title">痛みのない身体へ</h3>
+      <p class="stages__desc">まずはベース作り。<br>どこも痛くない、快適な身体を整えます。</p>
+    </div>
+    <div class="stages__card">
+      <p class="stages__num-label">STAGE</p>
+      <div class="stages__num">02</div>
+      <h3 class="stages__title">使える身体へ</h3>
+      <p class="stages__desc">日常動作が楽になり、<br>疲れにくい機能的な身体を創ります。</p>
+    </div>
+    <div class="stages__card">
+      <p class="stages__num-label">STAGE</p>
+      <div class="stages__num">03</div>
+      <h3 class="stages__title">理想の身体へ</h3>
+      <p class="stages__desc">あなたが目指す、<br>なりたい身体を一緒に創り上げます。</p>
+    </div>
+  </div>
+
+  <div class="stages__message">
+    焦らなくて大丈夫です。トレーナーがしっかり見ながら、バランスを整えていきます。<br>
+    <strong style="color: var(--gold-dark);">あなたのペースで、一歩ずつ。</strong>
+  </div>
+</section>
+
+<!-- ===== 6. CORE BEAUTY ===== -->
 <section class="section section--beauty">
   <p class="section__label">FOR WOMEN</p>
   <h2 class="section__title">CORE BEAUTY</h2>
@@ -574,6 +582,7 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+<!-- ===== 7. CORE BUILD ===== -->
 <section class="section mypage">
   <p class="section__label">FOR MEN</p>
   <h2 class="section__title">CORE BUILD</h2>
@@ -588,6 +597,7 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+<!-- ===== 8. 施設紹介 ===== -->
 <section class="facility">
   <p class="section__label">FACILITY</p>
   <h2 class="section__title">施設紹介</h2>
@@ -601,6 +611,40 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+<!-- ===== 9. お客様の声（社会的証明・料金前に配置） ===== -->
+<section class="voice">
+  <p class="section__label">VOICE</p>
+  <h2 class="section__title">お客様の声</h2>
+  <div class="section__line"></div>
+
+  <div class="voice__list">
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">M.Y</div>
+        <div class="voice__name">40代 女性</div>
+      </div>
+      <p class="voice__text">交通事故から肩がすごく痛かったけど、トレーニング始めてから全く痛くなくなりました。</p>
+    </div>
+
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">M.M</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">今まで1人でトレーニングしていたけど、トレーナーに診てもらうことで初めて正しいフォームを教えてもらって、めちゃめちゃ効果絶大でした！</p>
+    </div>
+
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">C.H</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">腰が結構痛かったんですが、トレーニングしていくとこんなに痛くなくなっていくのは、びっくりでした。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. 料金 ===== -->
 <section class="section price">
   <p class="section__label">PRICE</p>
   <h2 class="section__title">料金</h2>
@@ -642,6 +686,7 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+<!-- ===== 11. 体験セッション（CTA 1段目） ===== -->
 <section class="trial">
   <p class="section__label">TRIAL</p>
   <h2 class="section__title">まずは体験セッション。</h2>
@@ -652,38 +697,7 @@ a { color: inherit; text-decoration: none; }
   <a href="https://onebalanceyume-beep.github.io/private-gym-trainer/taiken_yoyaku.html" class="trial__btn" target="_blank" rel="noopener">体験を予約する →</a>
 </section>
 
-<section class="voice">
-  <p class="section__label">VOICE</p>
-  <h2 class="section__title">お客様の声</h2>
-  <div class="section__line"></div>
-
-  <div class="voice__list">
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">M.Y</div>
-        <div class="voice__name">40代 女性</div>
-      </div>
-      <p class="voice__text">交通事故から肩がすごく痛かったけど、トレーニング始めてから全く痛くなくなりました。</p>
-    </div>
-
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">M.M</div>
-        <div class="voice__name">30代 女性</div>
-      </div>
-      <p class="voice__text">今まで1人でトレーニングしていたけど、トレーナーに診てもらうことで初めて正しいフォームを教えてもらって、めちゃめちゃ効果絶大でした！</p>
-    </div>
-
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">C.H</div>
-        <div class="voice__name">30代 女性</div>
-      </div>
-      <p class="voice__text">腰が結構痛かったんですが、トレーニングしていくとこんなに痛くなくなっていくのは、びっくりでした。</p>
-    </div>
-  </div>
-</section>
-
+<!-- ===== 12. MISSION ===== -->
 <section class="mission">
   <p class="section__label">OUR MISSION</p>
   <h2 class="mission__title">鍛えるたびに、<br>自分の未来が変わる。</h2>
@@ -691,6 +705,7 @@ a { color: inherit; text-decoration: none; }
   <p class="mission__text">自分を、より好きになる。</p>
 </section>
 
+<!-- ===== 13. CTA LINE ===== -->
 <section class="cta">
   <p class="section__label">START</p>
   <h2 class="section__title">まずは、LINEで相談。</h2>
