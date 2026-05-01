@@ -23,7 +23,8 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
-p { line-break: strict; }
+p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; }
+.no-break { display: inline-block; white-space: nowrap; }
 
 :root {
   --pink-light: #fdf4f7;
@@ -661,7 +662,9 @@ p { line-break: strict; }
   <h2 class="section__title">もっと好きな自分を、<br>迎えに行く。</h2>
   <div class="section__line"></div>
   <p class="about-concept__intro">
-    はじめての方でも、安心して始められるジム。あなたのペースで、一歩ずつ。トレーナーがしっかり寄り添います。
+    はじめての方でも、安心して始められるジム。<br>
+    あなたのペースで、一歩ずつ。<br>
+    トレーナーが、しっかり寄り添います。
   </p>
 </section>
 
@@ -931,16 +934,29 @@ p { line-break: strict; }
       そう思われた方も多いと思います。
     </p>
     <p>
-      私、長尾は、アマチュアボクサーとして全国の舞台で戦ってきました。そしてボクシングトレーナーとしても、20年以上、"身体の動き・連動性"と向き合い続けてきました。
+      私、長尾は、アマチュアボクサーとして<br>
+      全国の舞台で戦ってきました。<br>
+      そしてボクシングトレーナーとしても、<br>
+      20年以上、"身体の動き・連動性"と<br>
+      向き合い続けてきました。
     </p>
     <p>
-      ボクシングで培われたのは、単に「強さ」ではありません。身体をミリ単位でコントロールし、最小限の力で最大のパフォーマンスを出す——言わば"身体の動きの専門技術"です。
+      ボクシングで培われたのは、<br>
+      単に「強さ」ではありません。<br>
+      身体をミリ単位でコントロールし、<br>
+      最小限の力で最大のパフォーマンスを出す——<br>
+      言わば"身体の動きの専門技術"です。
     </p>
     <p>
-      この20年以上で見てきたのは、無数の身体が、どう動き、どう整い、どう変わっていくか。
+      この20年以上で見てきたのは、<br>
+      無数の身体が、どう動き、<br>
+      どう整い、どう変わっていくか。
     </p>
     <p>
-      その経験を、「健康になりたい」「美しくありたい」女性のために最適化して抽出したのが、ONE-TREのトレーニングです。
+      その経験を、<br>
+      「健康になりたい」「美しくありたい」<br>
+      女性のために最適化して抽出したのが、<br>
+      ONE-TREのトレーニングです。
     </p>
   </div>
 
@@ -964,8 +980,9 @@ p { line-break: strict; }
 
   <p class="about-message__close">
     <strong>「整えてから、創る。」</strong><br>
-    20年以上、身体の動きを見つめてきた私だからこそ<br>
-    お届けできる、唯一無二のパーソナルトレーニングです。
+    20年以上、身体の動きを<br>
+    見つめてきた私だからこそお届けできる、<br>
+    唯一無二のパーソナルトレーニングです。
   </p>
 </section>
 
@@ -1077,7 +1094,10 @@ p { line-break: strict; }
   <h2 class="section__title">体験で、あなたの<br>"気になる"を解消。</h2>
   <div class="section__line"></div>
   <p class="exp__lead">
-    ONE-TREの体験は、完全オーダーメイド。あなたのお悩み・なりたい姿を聞いて、専任トレーナーが最適なトレーニングを設計します。
+    ONE-TREの体験は、完全オーダーメイド。<br>
+    あなたのお悩み・なりたい姿を聞いて、<br>
+    専任トレーナーが最適な<br>
+    トレーニングを設計します。
   </p>
 
   <div class="exp__worries">
@@ -1091,7 +1111,8 @@ p { line-break: strict; }
       <li class="exp__worries-item">自信を持ちたい</li>
     </ul>
     <p class="exp__worries-close">
-      あなたのお悩みに合わせて、体験内容をオーダーメイドします。
+      あなたのお悩みに合わせて、<br>
+      体験内容をオーダーメイドします。
     </p>
   </div>
 
@@ -1104,7 +1125,7 @@ p { line-break: strict; }
         <div class="exp__step-num">01</div>
         <div class="exp__step-content">
           <h3 class="exp__step-title">ヒアリング</h3>
-          <p class="exp__step-text">あなたのお悩み・なりたい姿を、丁寧にお聞きします。</p>
+          <p class="exp__step-text">あなたのお悩み・なりたい姿を、<br>丁寧にお聞きします。</p>
         </div>
       </div>
     </div>
@@ -1114,8 +1135,8 @@ p { line-break: strict; }
       <div class="exp__step-body">
         <div class="exp__step-num">02</div>
         <div class="exp__step-content">
-          <h3 class="exp__step-title">お悩みに合わせた体験トレーニング</h3>
-          <p class="exp__step-text">気になる部位・目標に合わせた、あなた専用の40分。</p>
+          <h3 class="exp__step-title">お悩みに合わせた<br>体験トレーニング</h3>
+          <p class="exp__step-text">気になる部位・目標に合わせた、<br>あなた専用の40分。</p>
         </div>
       </div>
     </div>
@@ -1125,7 +1146,7 @@ p { line-break: strict; }
         <div class="exp__step-num">03</div>
         <div class="exp__step-content">
           <h3 class="exp__step-title">日常に活かせるアドバイス</h3>
-          <p class="exp__step-text">無理な勧誘は一切ありません。姿勢や歩き方など、今日から意識できる"ちょっとしたコツ"をお伝えします。</p>
+          <p class="exp__step-text">無理な勧誘は、一切ありません。<br>姿勢や歩き方など、今日から意識できる<br>"ちょっとしたコツ"をお伝えします。</p>
         </div>
       </div>
     </div>
@@ -1144,7 +1165,11 @@ p { line-break: strict; }
   <div class="exp__after">
     <h3 class="exp__after-title">体験後の流れ</h3>
     <p class="exp__after-text">
-      体験後、ご入会をご希望の方には、最適なプランをご案内いたします。その場でお決めいただく必要はございません。ご家族とご相談いただいてから、LINEでお返事いただく形でも大丈夫です。
+      体験後、ご入会をご希望の方には、<br>
+      最適なプランをご案内いたします。<br>
+      その場でお決めいただく必要は、ございません。<br>
+      ご家族とご相談いただいてから、<br>
+      LINEでお返事いただく形でも大丈夫です。
     </p>
   </div>
 
