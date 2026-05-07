@@ -230,6 +230,29 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
   font-size: 10px; letter-spacing: 3px; color: #888; margin-bottom: 8px;
 }
 
+/* === トロフィー写真（実績の証） === */
+.about-profile__trophy {
+  margin: 20px 0;
+  padding: 16px 0;
+  border-top: 0.5px solid #e5e5e5;
+  text-align: center;
+}
+.about-profile__trophy-img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border: 0.5px solid #e5e5e5;
+}
+.about-profile__trophy-caption {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold-dark);
+  font-family: "Times New Roman", serif;
+}
+
 /* === マイページ：白×ゴールド版（女性向け優しいデザイン） === */
 .mypage { background: #fff; color: var(--dark); padding: 70px 24px; text-align: center; }
 .mypage .section__label { color: var(--gold-dark); }
@@ -1160,6 +1183,13 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
             <span>全日本実業団選手権 ライト級 優勝＆MVP</span>
           </li>
         </ul>
+
+        <!-- トロフィー写真（実績の証） -->
+        <div class="about-profile__trophy">
+          <img src="trophy.jpg" alt="獲得トロフィー・実績の証" class="about-profile__trophy-img" loading="lazy">
+          <p class="about-profile__trophy-caption">— 実績の証 —</p>
+        </div>
+
         <div class="about-profile__qualifications">
           <span class="about-profile__qualifications-label">QUALIFICATIONS</span>
           Essential Coaching 講師<br>
