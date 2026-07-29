@@ -576,6 +576,44 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
 .price__entry { margin-top: 24px; text-align: center; font-size: 11px; color: #666; }
 .price__entry-strike { text-decoration: line-through; color: #999; margin-right: 8px; }
 .price__entry-free { color: var(--gold-dark); font-weight: 500; font-size: 12px; }
+  .price__campaign {
+  max-width: 440px; margin: 24px auto 8px;
+  background: linear-gradient(135deg, #fdf4f7, #fff);
+  border: 1.5px solid var(--gold);
+  padding: 20px 20px 18px;
+  text-align: center;
+}
+.price__campaign-badge {
+  display: inline-block;
+  background: var(--gold); color: #fff;
+  font-size: 10px; letter-spacing: 3px;
+  padding: 4px 16px; margin-bottom: 12px;
+  font-family: "Times New Roman", serif; font-weight: 500;
+}
+.price__campaign-title {
+  font-size: clamp(14px, 4vw, 16px); color: var(--dark);
+  line-height: 1.8; margin-bottom: 8px; letter-spacing: 0.5px;
+}
+.price__campaign-strike {
+  text-decoration: line-through; color: #999; font-size: 0.9em;
+}
+.price__campaign-free {
+  color: var(--gold-dark); font-weight: 700; font-size: 1.15em;
+}
+.price__campaign-sub {
+  font-size: clamp(11px, 3vw, 12.5px); color: #666; line-height: 1.9;
+}
+.price__amount-strike {
+  font-family: "Times New Roman", serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: #999; text-decoration: line-through;
+  display: block;
+}
+.price__amount--campaign {
+  color: var(--gold-dark);
+  font-size: clamp(22px, 6vw, 26px);
+  font-weight: 500;
+}
 .price__no-push { margin-top: 16px; text-align: center; font-size: 11px; color: #888; letter-spacing: 2px; }
 .price__payment {
   margin-top: 32px; padding: 24px 20px; background: var(--bg-soft); border: 0.5px solid #e5e5e5;
@@ -1583,13 +1621,20 @@ body.menu-open { overflow: hidden; }
   <div class="section__line"></div>
   <p class="price__note">1回50分／男女共通</p>
 
+  <div class="price__campaign">
+    <p class="price__campaign-badge">CAMPAIGN</p>
+    <p class="price__campaign-title">今だけ、入会金 <span class="price__campaign-strike">¥11,000</span> → <span class="price__campaign-free">¥0</span></p>
+    <p class="price__campaign-sub">先着5名様限定キャンペーン<br>定員に達し次第、予告なく終了します</p>
+  </div>
+
   <div class="price__list">
     <div class="price__card">
       <div class="price__card-row">
         <span class="price__count">8回</span>
         <div class="price__card-inner">
-          <span class="price__amount">¥49,800</span>
-          <span class="price__per">1回あたり ¥6,225</span>
+          <span class="price__amount-strike">¥49,800</span>
+          <span class="price__amount price__amount--campaign">¥44,820</span>
+          <span class="price__per">1回あたり 約¥6,100</span>
         </div>
       </div>
       <p class="price__pace">週1回 × 約2ヶ月</p>
@@ -1599,8 +1644,9 @@ body.menu-open { overflow: hidden; }
       <div class="price__card-row">
         <span class="price__count">16回</span>
         <div class="price__card-inner">
-          <span class="price__amount">¥94,800</span>
-          <span class="price__per">1回あたり ¥5,925</span>
+          <span class="price__amount-strike">¥94,800</span>
+          <span class="price__amount price__amount--campaign">¥85,320</span>
+          <span class="price__per">1回あたり 約¥5,300</span>
         </div>
       </div>
       <p class="price__pace">週1回 × 約4ヶ月で確実な変化を</p>
@@ -1609,24 +1655,23 @@ body.menu-open { overflow: hidden; }
       <div class="price__card-row">
         <span class="price__count">32回</span>
         <div class="price__card-inner">
-          <span class="price__amount">¥178,000</span>
-          <span class="price__per">1回あたり ¥5,563</span>
+          <span class="price__amount-strike">¥178,000</span>
+          <span class="price__amount price__amount--campaign">¥160,200</span>
+          <span class="price__per">1回あたり 約¥5,000</span>
         </div>
       </div>
       <p class="price__pace">週1回 × 約8ヶ月で理想を日常に</p>
     </div>
    <p class="price__entry">
-      入会金 ¥11,000
+      入会金 <span class="price__entry-strike">¥11,000</span><span class="price__entry-free">今だけ ¥0</span>
     </p>
     <p class="price__no-push">— 無理な勧誘は、一切ありません。—</p>
-
     <div class="price__payment">
       <p class="price__payment-label">PAYMENT</p>
       <p class="price__payment-list">VISA / Master / JCB / AMEX<br>PayPay / J-Coin Pay</p>
     </div>
   </div>
 </section>
-
 <!-- ===== 会員の流れ ===== -->
 <section class="exp" id="member">
   <p class="section__label">MEMBER FLOW</p>
