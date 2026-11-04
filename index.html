@@ -339,6 +339,11 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
   font-family: "Times New Roman", serif; color: var(--gold-dark);
   font-weight: 500; min-width: 42px; flex-shrink: 0; font-size: 11px;
 }
+.about-profile__wrap--trainer { margin-top: 72px; padding-top: 72px; border-top: 0.5px solid #e5e5e5; }
+.about-profile__message { margin-top: 20px; padding-top: 20px; border-top: 0.5px solid #e5e5e5; text-align: center; font-size: clamp(12px, 3.3vw, 13px); color: #555; line-height: 2; }
+.about-profile__message p { margin-bottom: 14px; }
+.about-profile__message p:last-child { margin-bottom: 0; }
+.about-profile__message-lead { font-size: clamp(14px, 3.8vw, 15px); color: var(--gold-dark); font-weight: 500; line-height: 1.9; }
 .about-profile__qualifications {
   max-width: 440px; margin: 16px auto 0; padding: 16px 24px;
   font-size: 11px; color: #666; text-align: center; letter-spacing: 1px; line-height: 1.9;
@@ -904,6 +909,7 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
   .about-profile__info { text-align: left; }
   .about-profile__role, .about-profile__name-en, .about-profile__name-jp { text-align: left; }
   .about-profile__bio { margin: 0; }
+  .about-profile__message { text-align: left; }
   .about-profile__qualifications { margin: 16px 0 0; }
   .facility__features { grid-template-columns: repeat(5, 1fr); }
 }
@@ -1559,7 +1565,7 @@ body.menu-open { overflow: hidden; }
 <!-- ===== 11. ABOUT 3部：プロフィール ===== -->
 <section class="about-profile">
   <p class="section__label">PROFILE</p>
-  <h2 class="section__title">代表プロフィール</h2>
+  <h2 class="section__title">代表・トレーナー紹介</h2>
   <div class="section__line"></div>
 
   <div class="about-profile__wrap">
@@ -1608,6 +1614,60 @@ body.menu-open { overflow: hidden; }
           <span class="about-profile__qualifications-label">QUALIFICATIONS</span>
           Essential Coaching 講師<br>
           DiSC®アセスメント認定講師
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== トレーナー：稲田大地（G） ===== -->
+  <div class="about-profile__wrap about-profile__wrap--trainer">
+    <div class="about-profile__photo-wrap">
+      <img src="inada.jpg" alt="トレーナー 稲田大地（G）" class="about-profile__photo" loading="lazy">
+    </div>
+    <div class="about-profile__info">
+      <p class="about-profile__role">TRAINER</p>
+      <p class="about-profile__name-en">G</p>
+      <p class="about-profile__name-jp">稲 田 大 地</p>
+
+      <div class="about-profile__bio">
+        <p class="about-profile__bio-label">CAREER</p>
+
+        <div class="about-profile__career-summary">
+          トレーナー歴<br>
+          <strong>15年</strong>
+        </div>
+
+        <ul class="about-profile__bio-list">
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2012</span>
+            <span>全国高校総体 ライトウェルター級 出場</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2013</span>
+            <span>全国高校総体 ライトウェルター級 出場</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2013</span>
+            <span>全国高校総体 中国大会 ライトウェルター級 準優勝</span>
+          </li>
+        </ul>
+
+        <div class="about-profile__message">
+          <p class="about-profile__message-lead">トレーニングが初めてでも、<br>安心して始められます。</p>
+          <p>
+            体を動かすことが大好きなトレーナーです。<br>
+            ボクシングで鍛えた確かなパワーに加えて、<br>
+            柔軟性と俊敏性も兼ね備えています。
+          </p>
+          <p>
+            体がどう動くかを体感で理解しているので、<br>
+            ただ引き締めるだけではなく、<br>
+            「ちゃんと動ける体」をつくりながら<br>
+            引き締めていきます。
+          </p>
+          <p>
+            「本当に優しい人です」<br>
+            会員さんから、よくいただくお声です。
+          </p>
         </div>
       </div>
     </div>
