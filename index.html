@@ -339,7 +339,10 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
   font-family: "Times New Roman", serif; color: var(--gold-dark);
   font-weight: 500; min-width: 42px; flex-shrink: 0; font-size: 11px;
 }
-.about-profile__wrap--trainer { margin-top: 72px; padding-top: 72px; border-top: 0.5px solid #e5e5e5; }
+.about-profile__subhead { margin-top: 80px; padding-top: 72px; border-top: 0.5px solid #e5e5e5; max-width: 720px; margin-left: auto; margin-right: auto; text-align: center; }
+.about-profile__wrap--trainer { margin-top: 32px; }
+.about-profile__nick { font-family: inherit; font-size: 0.55em; letter-spacing: 1px; color: #888; margin-left: 4px; }
+.about-profile__bio-sublabel { font-size: 11px; letter-spacing: 2px; color: var(--gold-dark); text-align: center; margin: 0 0 4px; }
 .about-profile__message { margin-top: 20px; padding-top: 20px; border-top: 0.5px solid #e5e5e5; text-align: center; font-size: clamp(12px, 3.3vw, 13px); color: #555; line-height: 2; }
 .about-profile__message p { margin-bottom: 14px; }
 .about-profile__message p:last-child { margin-bottom: 0; }
@@ -1565,7 +1568,7 @@ body.menu-open { overflow: hidden; }
 <!-- ===== 11. ABOUT 3部：プロフィール ===== -->
 <section class="about-profile">
   <p class="section__label">PROFILE</p>
-  <h2 class="section__title">代表・トレーナー紹介</h2>
+  <h2 class="section__title">代表紹介</h2>
   <div class="section__line"></div>
 
   <div class="about-profile__wrap">
@@ -1619,23 +1622,30 @@ body.menu-open { overflow: hidden; }
     </div>
   </div>
   <!-- ===== トレーナー：稲田大地（G） ===== -->
+  <div class="about-profile__subhead">
+    <p class="section__label">STAFF</p>
+    <h2 class="section__title">トレーナー紹介</h2>
+    <div class="section__line"></div>
+  </div>
+
   <div class="about-profile__wrap about-profile__wrap--trainer">
     <div class="about-profile__photo-wrap">
       <img src="inada.jpg" alt="トレーナー 稲田大地（G）" class="about-profile__photo" loading="lazy">
     </div>
     <div class="about-profile__info">
       <p class="about-profile__role">TRAINER</p>
-      <p class="about-profile__name-en">G</p>
+      <p class="about-profile__name-en">G <span class="about-profile__nick">(Nickname)</span></p>
       <p class="about-profile__name-jp">稲 田 大 地</p>
 
       <div class="about-profile__bio">
         <p class="about-profile__bio-label">CAREER</p>
 
         <div class="about-profile__career-summary">
-          トレーナー歴<br>
+          フィジカルトレーニング歴<br>
           <strong>15年</strong>
         </div>
 
+        <p class="about-profile__bio-sublabel">BOXING ｜ ボクシング歴（大会実績）</p>
         <ul class="about-profile__bio-list">
           <li class="about-profile__bio-item">
             <span class="about-profile__bio-year">2012</span>
