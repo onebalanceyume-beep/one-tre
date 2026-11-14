@@ -581,6 +581,11 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
   letter-spacing: 1px; text-align: center;
   padding-top: 10px; border-top: 0.5px solid #e5e5e5;
 }
+.price__pair { margin-top: 20px; padding: 14px 12px; border: 1px solid var(--gold-dark); text-align: center; }
+.price__pair-label { font-size: 10px; letter-spacing: 3px; color: #888; font-family: "Times New Roman", serif; }
+.price__pair-text { margin-top: 6px; font-size: clamp(13px, 3.6vw, 14px); color: #444; }
+.price__pair-em { color: var(--gold-dark); font-weight: 500; font-size: clamp(15px, 4.2vw, 17px); }
+.price__pair-sub { margin-top: 4px; font-size: 10px; color: #999; }
 .price__entry { margin-top: 24px; text-align: center; font-size: 11px; color: #666; }
 .price__entry-strike { text-decoration: line-through; color: #999; margin-right: 8px; }
 .price__entry-free { color: var(--gold-dark); font-weight: 500; font-size: 12px; }
@@ -1701,7 +1706,7 @@ body.menu-open { overflow: hidden; }
         <div class="price__card-inner">
           <span class="price__amount-strike">¥49,800</span>
           <span class="price__amount price__amount--campaign">¥44,820</span>
-          <span class="price__per">1回あたり 約¥6,100</span>
+          <span class="price__per">1回あたり 約¥5,600</span>
         </div>
       </div>
       <p class="price__pace">週1回 × 約2ヶ月</p>
@@ -1728,6 +1733,11 @@ body.menu-open { overflow: hidden; }
         </div>
       </div>
       <p class="price__pace">週1回 × 約8ヶ月で理想を日常に</p>
+    </div>
+    <div class="price__pair">
+      <p class="price__pair-label">PAIR DISCOUNT</p>
+      <p class="price__pair-text">ペア割 <span class="price__pair-em">さらに20%オフ</span></p>
+      <p class="price__pair-sub">お友達・ご家族と2人同時受講の場合に適用</p>
     </div>
    <p class="price__entry">
       入会金 <span class="price__entry-strike">¥11,000</span><span class="price__entry-free">今だけ ¥0</span>
