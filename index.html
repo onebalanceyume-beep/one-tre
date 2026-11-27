@@ -32,9 +32,10 @@
   "@type": "HealthClub",
   "name": "パーソナルジム ONE-TRE",
   "alternateName": "ワントレ",
-  "description": "鳥取県米子市の完全個室・完全予約制パーソナルトレーニングジム。運動初心者や女性も安心。25年のトレーニング歴・指導歴20年のトレーナーが、体の使い方から丁寧に指導します。",
+  "description": "鳥取県米子市の完全個室・完全予約制パーソナルトレーニングジム。運動初心者や女性も安心。ボクシングで培った体の使い方をもとにした「ONE-TREメソッド」で、担当トレーナーがマンツーマンで指導します。",
   "image": "https://one-tre.com/logo_sign.jpg",
   "url": "https://one-tre.com/",
+  "telephone": "+81-859-49-5275",
   "address": {
     "@type": "PostalAddress",
     "postalCode": "683-0006",
@@ -83,7 +84,7 @@
       "name": "体験ではどんなことをしますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "まずは、姿勢改善のための体幹トレーニングを、当ジム独自のフィジカル体幹メニューで行います。あわせて、ヒップアップ（お尻・体のライン・脚の引き締め）を中心にご案内します。鍛えたい場所などのご希望があれば、メニューの変更ももちろん可能です。"
+        "text": "まずは、姿勢改善のための体幹トレーニングを、当ジム独自のフィジカル体幹メニューで行います。あわせて、ヒップアップ（お尻・体のライン・脚の引き締め）を中心にご案内します。鍛えたい場所などのご希望があれば、メニューの変更ももちろん可能です。体験は約40分、3,300円です。"
       }
     },
     {
@@ -989,6 +990,12 @@ p, h1, h2, h3, h4, span, li, div { line-break: strict; word-break: auto-phrase; 
 .ub__arrow{color:var(--gold);font-size:14px;line-height:1;padding:10px 0}
 .ub__sub{font-size:clamp(13px,3.5vw,14px);letter-spacing:2px;color:#555;margin:0 auto 20px}
 </style>
+<style>
+.nx-cta{text-align:center;margin-top:32px;}
+.nx-cta a{display:inline-block;min-width:260px;padding:16px 24px;background:var(--gold-dark);color:#fff;text-decoration:none;letter-spacing:1px;font-size:14px;}
+.nx-tel{text-align:center;margin-top:24px;font-size:13px;line-height:2;}
+.nx-tel a{font-size:24px;color:inherit;text-decoration:none;letter-spacing:2px;}
+</style>
 </head>
 <body>
 <script>
@@ -1086,15 +1093,15 @@ body.menu-open { overflow: hidden; }
   <p class="menu-panel__label">MENU</p>
 <ul class="menu-panel__list">
     <li class="menu-panel__item">
-      <a href="#about" class="menu-panel__link">
-        <span class="menu-panel__en">ABOUT</span>
-        コンセプト
+      <a href="#method" class="menu-panel__link">
+        <span class="menu-panel__en">METHOD</span>
+        ONE-TREメソッド
       </a>
     </li>
     <li class="menu-panel__item">
-      <a href="#stages" class="menu-panel__link">
-        <span class="menu-panel__en">3 STAGES</span>
-        3つのステージ
+      <a href="#trainer" class="menu-panel__link">
+        <span class="menu-panel__en">TRAINER</span>
+        担当トレーナー
       </a>
     </li>
     <li class="menu-panel__item">
@@ -1177,25 +1184,54 @@ body.menu-open { overflow: hidden; }
   <div class="header__sub">YONAGO / TOTTORI</div>
 </header>
 
-<!-- ===== 1. FV ===== -->
+<style>
+.nx-trial{margin-top:20px;font-size:14px;letter-spacing:2px;}
+.nx-trial strong{font-size:24px;font-weight:500;color:var(--gold-dark);}
+.nx-method{background:var(--bg-soft);padding:80px 24px;}
+.nx-steps{max-width:900px;margin:36px auto;display:grid;grid-template-columns:1fr;gap:20px;}
+.nx-step{background:#fff;border:1px solid var(--gold);}
+.nx-step img{display:block;width:100%;height:220px;object-fit:cover;}
+.nx-step__body{padding:20px;text-align:center;}
+.nx-step__num{font-size:11px;letter-spacing:5px;color:var(--gold-dark);}
+.nx-step h3{font-size:20px;font-weight:500;letter-spacing:2px;margin:6px 0 8px;}
+.nx-step__body p:last-child{font-size:13px;line-height:2;color:#555;}
+.nx-note{font-size:11px;color:#777;text-align:center;margin-top:16px;}
+.nx-concept{font-size:18px;letter-spacing:3px;text-align:center;margin-top:36px;}
+.nx-subhead{text-align:center;}
+.nx-price-trial{max-width:480px;margin:0 auto 24px;padding:24px;text-align:center;border:1px solid var(--gold);font-size:13px;line-height:2;}
+.nx-price-trial__yen{font-size:36px;color:var(--gold-dark);line-height:1.4;}
+@media (min-width:768px){.nx-steps{grid-template-columns:repeat(3,1fr);}}
+</style>
+
+<style>
+section.fv{display:block;height:auto;min-height:0;padding:0 0 40px;background:#fff;}
+section.fv .fv__slider{position:relative;height:auto;max-width:720px;margin:0 auto;padding-top:var(--nx-head,56px);}
+.nx-fv-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;}
+section.fv .fv__content{padding:28px 24px 0;}
+section.fv .fv__tag,section.fv .fv__scroll{display:none;}
+section.fv .fv__title{font-size:clamp(28px,7.6vw,44px);line-height:1.55;margin-bottom:16px;}
+section.fv .fv__line{margin-bottom:12px;}
+section.fv .fv__welcome{margin-top:10px;}
+section.fv .nx-trial{margin-top:8px;}
+.hamburger{top:6px !important;}
+.header__sub{margin-right:52px;}
+@media (min-width:900px){section.fv{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;gap:32px;padding:96px 40px 56px;max-width:1280px;margin:0 auto;}section.fv .fv__slider{padding-top:0;max-width:none;}section.fv .fv__content{padding:0;}section.fv .fv__title{font-size:40px;}}
+</style>
 <section class="fv">
   <div class="fv__slider">
-    <div class="fv__slide active" id="slide1"></div>
-    <div class="fv__slide" id="slide2"></div>
-    <div class="fv__slide" id="slide3"></div>
+    <img src="exp02.webp" alt="稲田トレーナーが会員さんにマンツーマンで教えている様子" class="nx-fv-img">
   </div>
-  <div class="fv__overlay"></div>
   <div class="fv__content">
     <p class="fv__tag">FIRST-TIMERS WELCOME</p>
     <h1 class="fv__title">運動したことが<br>なくても、<br>大丈夫。</h1>
     <div class="fv__line"></div>
     <p class="fv__sub">米子のマンツーマンパーソナル<br><span style="white-space:nowrap">ONE-TRE</span></p>
     <p class="fv__welcome">— 運動初心者の方、大歓迎です。—</p>
+    <p class="nx-trial">体験 約40分　<strong>3,300円</strong></p>
   </div>
   <p class="fv__scroll">SCROLL ↓</p>
 </section>
 
-<!-- ===== 4. こんな方へ ===== -->
 <section class="concern">
   <p class="section__label">FOR YOU</p>
   <h2 class="section__title">こんな方へ</h2>
@@ -1230,112 +1266,164 @@ body.menu-open { overflow: hidden; }
   </div>
 </section>
 
-<!-- ===== 2. ABOUT 1部：コンセプトのみ ===== -->
-<section class="about-concept" id="about">
-  <p class="section__label">ABOUT</p>
-  <h2 class="section__title">どこも痛くないカラダ。<br>快適なカラダ。</h2>
+<!-- ===== ONE-TREメソッド ===== -->
+<section class="nx-method" id="method">
+  <p class="section__label">ONE-TRE METHOD</p>
+  <h2 class="section__title">鍛える前に、<br>体の使い方から。</h2>
   <div class="section__line"></div>
-  <p class="about-concept__intro">
-    朝起きたら腰が痛い。気づけば背中や膝も重い——そんな体の節々の痛みに、まずは適度な筋力をつけることで「痛くない体」を取り戻します。そこから、より動きやすく、快適に過ごせる体へ。<br><br>
-    その場だけ良くして終わり、ではありません。あなたの人生が、この先ずっと快適で、豊かで、安心できるものであるように。それがONE-TREが目指すゴールです。<br><br>
-    はじめての方も安心してください。無理な勧誘は一切ありません。あなたのペースで、一歩ずつ。<br><br>
-    まずは体験から、あなたの体を確かめてみませんか。
-  </p>
-</section>
-
-<!-- ===== 2.5 ジムへの入口（隠れ家感アピール） ===== -->
-<section class="entrance-section">
-  <p class="section__label">ENTRANCE</p>
-  <h2 class="section__title">ジムへの、入口。</h2>
-  <div class="section__line"></div>
-  <p class="section__lead">
-    ボクシングジムの一角に、<br>
-    隠れ家のように佇む完全個室。
-  </p>
-
-  <div class="entrance__grid">
-    <div class="entrance__item entrance__item--main">
-      <img src="entrance.webp" alt="ジムへの入口" class="entrance__img" loading="lazy">
+  <p class="section__lead">ボクシングを通じて深めた<br>動き・重心・バランス・連動性の理解を<br>体系化した「ONE-TREメソッド」です。</p>
+  <div class="nx-steps">
+    <div class="nx-step">
+      <img src="exp01.webp" alt="痛みのない体へ" loading="lazy">
+      <div class="nx-step__body"><p class="nx-step__num">STEP 1</p><h3>痛みのない体へ</h3><p>体の状態を整え、痛みや不調に悩まされない体を目指します。</p></div>
     </div>
-    <div class="entrance__item">
-      <img src="logo_sign.webp" alt="ONE-TREロゴ" class="entrance__img" loading="lazy">
+    <div class="nx-step">
+      <img src="exp_menu_leg1.webp" alt="快適に動ける体へ" loading="lazy">
+      <div class="nx-step__body"><p class="nx-step__num">STEP 2</p><h3>快適に動ける体へ</h3><p>体本来の使い方を身につけ、軽やかに動ける体を目指します。</p></div>
     </div>
-    <div class="entrance__item">
-      <img src="door.webp" alt="完全個室の入口" class="entrance__img" loading="lazy">
+    <div class="nx-step">
+      <img src="exp_menu_back1.webp" alt="なりたい自分へ" loading="lazy">
+      <div class="nx-step__body"><p class="nx-step__num">STEP 3</p><h3>なりたい自分へ</h3><p>理想の体型、体力、健康、挑戦。あなたの目標をサポートします。</p></div>
     </div>
   </div>
+  <p class="section__lead">筋力・体幹・連動性・柔軟性を<br>バランスよく高めます。</p>
+  <p class="section__lead">理想は週2回ですが、<br>週1回からでも続けられます。</p>
+  <p class="nx-note">※ 進捗や効果には個人差があります。</p>
+  <p class="nx-concept">じぶんのことを、より好きになる。</p>
 </section>
 
-<!-- ===== 3. 使える体とは ===== -->
-<section class="ub"><p class="section__label">WHAT IS A USABLE BODY</p><h2 class="section__title">使える体とは。</h2><div class="section__line"></div>
-<p class="ub__lead">まずは、どこも痛くない体を取り戻す。<br>そこから、<em>「使える体」</em>へ。</p>
-<div class="ub__steps">
- <div class="ub__step"><span class="ub__stepno">STEP 1</span><span class="ub__steptitle">痛くない体</span><span class="ub__stepdesc">適度な筋力をつけて、<br>「痛くない体」を取り戻す。</span></div>
- <div class="ub__arrow">▼</div>
- <div class="ub__step ub__step--on"><span class="ub__stepno">STEP 2</span><span class="ub__steptitle">使える体</span><span class="ub__stepdesc">より動きやすく、<br>快適に過ごせる体へ。</span></div>
-</div>
-<p class="ub__sub">使える体は、この4要素で決まります。</p>
-<div class="ub__grid"><div class="ub__card"><span class="ub__no">01</span><span class="ub__name">筋力</span><span class="ub__def">力を出す能力</span></div><div class="ub__card"><span class="ub__no">02</span><span class="ub__name">体幹</span><span class="ub__def">力を安定させる土台</span></div><div class="ub__card"><span class="ub__no">03</span><span class="ub__name">連動性</span><span class="ub__def">力をつなげて伝える能力</span></div><div class="ub__card"><span class="ub__no">04</span><span class="ub__name">柔軟性</span><span class="ub__def">可動域を広げて無駄なく動く能力</span></div></div><div class="ub__sum">動きの質を決める、4要素。</div>
-<p class="ub__close"><strong>「整えてから、創る。」</strong>ちゃんと動ける体を、ONE-TREで。</p></section>
+<!-- ===== 担当トレーナー ===== -->
+<section class="about-profile" id="trainer">
+  <!-- ===== トレーナー：稲田大地（G） ===== -->
+  <div class="nx-subhead">
+    <p class="section__label">STAFF</p>
+    <h2 class="section__title">担当トレーナー</h2>
+    <div class="section__line"></div>
+  </div>
 
-<!-- ===== 5. 3ステージ ===== -->
-<section class="stages" id="stages">
-  <p class="section__label">3 STAGES</p>
-  <h2 class="section__title">3つのステージ</h2>
+  <div class="about-profile__wrap about-profile__wrap--trainer">
+    <div class="about-profile__photo-wrap">
+      <img src="inada.webp" alt="トレーナー 稲田大地（G）" class="about-profile__photo" style="transform:scale(1.515);transform-origin:61.8% 80.9%" loading="lazy">
+    </div>
+    <div class="about-profile__info">
+      <p class="about-profile__role">TRAINER</p>
+      <p class="about-profile__name-en">G <span class="about-profile__nick">（ニックネーム）</span></p>
+      <p class="about-profile__name-jp">稲 田 大 地</p>
+
+      <div class="about-profile__bio">
+        <p class="about-profile__bio-label">CAREER</p>
+
+        <div class="about-profile__career-summary">
+          フィジカルトレーニング歴<br>
+          <strong>15年</strong>
+        </div>
+
+        <p class="about-profile__bio-sublabel">BOXING ｜ ボクシング歴（大会実績）</p>
+        <ul class="about-profile__bio-list">
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2012</span>
+            <span>全国高校総体 ライトウェルター級 出場</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2013</span>
+            <span>全国高校総体 ライトウェルター級 出場</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2013</span>
+            <span>全国高校総体 中国大会 ライトウェルター級 準優勝</span>
+          </li>
+        </ul>
+
+        <div class="about-profile__message">
+          <p class="about-profile__message-lead">トレーニングが初めてでも、<br>安心して始められます。</p>
+          <p>
+            体を動かすことが大好きなトレーナーです。<br>
+            ボクシングで鍛えた確かなパワーに加えて、<br>
+            柔軟性と俊敏性も兼ね備えています。
+          </p>
+          <p>
+            体がどう動くかを体感で理解しているので、<br>
+            ただ引き締めるだけではなく、<br>
+            「ちゃんと動ける体」をつくりながら<br>
+            引き締めていきます。
+          </p>
+          <p>
+            「本当に優しい人です」<br>
+            会員さんから、よくいただくお声です。<br>
+            トレーニング中の声かけや励ましで、<br>
+            モチベーションを上げてくれるトレーナーです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="nx-cta"><a href="https://onebalanceyume-beep.github.io/private-gym-trainer/taiken_yoyaku.html" target="_blank" rel="noopener">体験予約（約40分・3,300円）→</a></div>
+</section>
+
+<section class="voice" id="voice">
+  <p class="section__label">VOICE</p>
+  <h2 class="section__title">お客様の声</h2>
   <div class="section__line"></div>
-  <p class="stages__lead">
-    段階的に、確実に。<br>あなたの身体は、3つのステージを経て、<br>理想へ近づいていきます。
+
+  <p class="voice__lead">トレーニングで、<br>日常の楽しみがもっと楽しくなる。</p>
+  <div class="voice__list">
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">ライブ</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">
+        トレーニングを始めたきっかけは、好きなアーティストのライブを、これからもずっと楽しみたいという思いでした。<br><br>
+        県外までライブに出かけ、会場では飛び跳ねたり、旅行先を歩き回ったり。年齢を重ねても、そんな推し活を思いきり楽しめる体でいたい。そんな思いからトレーニングをスタート。<br><br>
+        数ヶ月後、実際にライブへ行ってみると、以前よりも体が動くようになり、翌日も思っていたほど疲れが残らず、そのまま観光を楽しむことができたそうです。
+      </p>
+    </div>
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">出張</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">
+        仕事で都会へ出張される方からも、嬉しい変化がありました。<br><br>
+        普段の生活では歩かないような距離を歩く出張。以前は足首やふくらはぎの痛みが気になっていたそうですが、トレーニングを始めてからは痛みが気になりにくくなり、思っていた以上に楽に歩けるように。<br><br>
+        体が疲れにくくなったことで、気分まで軽くなり、出張そのものをより快適に楽しめるようになったそうです。
+      </p>
+    </div>
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">M.Y</div>
+        <div class="voice__name">40代 女性</div>
+      </div>
+      <p class="voice__text">交通事故から肩がすごく痛かったけど、トレーニング始めてから全く痛くなくなりました。</p>
+    </div>
+
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">M.M</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">今まで1人でトレーニングしていたけど、トレーナーに見てもらうことで初めて正しいフォームを教えてもらって、めちゃめちゃ効果絶大でした！</p>
+    </div>
+
+    <div class="voice__card">
+      <div class="voice__head">
+        <div class="voice__icon">C.H</div>
+        <div class="voice__name">30代 女性</div>
+      </div>
+      <p class="voice__text">腰が結構痛かったんですが、トレーニングしていくとこんなに痛くなくなっていくのは、びっくりでした。</p>
+    </div>
+  </div>
+  <p class="voice__closing">
+    体を鍛えることは、ただ筋肉をつけることではない。<br>
+    好きなことを楽しむため。<br>
+    仕事や旅行をもっと快適に過ごすため。<br>
+    そして、これから先も<br>自分らしい人生を楽しみ続けるため。<br>
+    ONE-TREは、そんな日常の変化を大切にしています。
   </p>
-
-  <div class="stages__grid">
-    <div class="stages__card">
-      <div class="stages__icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M6 38h36 M10 38v-6h8v-8h8v-8h8v-6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <p class="stages__period">1〜3 MONTHS</p>
-      <div class="stages__num">01</div>
-      <h3 class="stages__title">整えて、動きやすく。</h3>
-      <p class="stages__desc">まずは固まった体を「整える」ことから。痛みが消え、階段の上り下りが楽になるのを実感。バランスの崩れた筋力を適切に整え、楽で動きやすい体へ。</p>
-    </div>
-    <div class="stages__card">
-      <div class="stages__icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="14" y="6" width="20" height="32" rx="2" stroke-linejoin="round"/>
-          <line x1="20" y1="42" x2="28" y2="42" stroke-linecap="round"/>
-          <circle cx="24" cy="22" r="4"/>
-        </svg>
-      </div>
-      <p class="stages__period">4〜6 MONTHS</p>
-      <div class="stages__num">02</div>
-      <h3 class="stages__title">正しく、美しく。</h3>
-      <p class="stages__desc">正しい動きが定着し、姿勢が劇的に改善。鏡を見るのが楽しくなり、周囲から「痩せた？」と聞かれる変化が見える時期。</p>
-    </div>
-    <div class="stages__card">
-      <div class="stages__icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M24 6l3 9h9l-7 6 3 10-8-6-8 6 3-10-7-6h9z" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <p class="stages__period">6 MONTHS〜</p>
-      <div class="stages__num">03</div>
-      <h3 class="stages__title">理想を、日常に。</h3>
-      <p class="stages__desc">理想の自分を「キープ＆更新」。自分に自信がつき、新しい服や趣味に挑戦したくなる、前向きな変化を提供。</p>
-    </div>
-  </div>
-
-  <div class="stages__notice">
-    <p class="stages__notice-text">
-      理想は週2回ですが、お忙しい方でも<br>
-      <strong class="stages__notice-strong">「週1回の習慣」で確実に変化を感じていただける設計です。</strong>
-    </p>
-  </div>
-  <p class="stages__individual">※ 進捗や効果には個人差があります。</p>
+<p class="nx-note">※個人の感想です。効果を保証するものではありません。</p>
+<div class="nx-cta"><a href="https://onebalanceyume-beep.github.io/private-gym-trainer/taiken_yoyaku.html" target="_blank" rel="noopener">体験予約（約40分・3,300円）→</a></div>
 </section>
 
- 
-  <!-- ===== 体験メニュー（3STAGESの後に追加） ===== -->
 <style>
 .expmenu { background:#fff; padding:70px 24px; }
 .expmenu__lead { max-width:560px; margin:32px auto 8px; font-size:clamp(13px,3.5vw,15px); line-height:2.2; color:#444; text-align:center; }
@@ -1413,434 +1501,11 @@ body.menu-open { overflow: hidden; }
       痛みのない、健康的で理想的な姿勢へ。<br>
       <strong>体験は、あくまで入口です。</strong><br>
       ここから全身を、あなただけのプランで、<br>
-      3つのステージを経て変えていきます。
+      ONE-TREメソッドで変えていきます。
     </p>
   </div>
 </section>
-<section class="section section--beauty">
-  <p class="section__label">FOR WOMEN</p>
-  <h2 class="section__title">CORE BEAUTY</h2>
-  <div class="section__line"></div>
-  <p class="section__lead">しなやかな、良い身体を創る。</p>
-  <p class="menu-beauty-message">— 女性が、安心して通えるジム。—</p>
 
-  <div class="menu">
-    <div class="menu__item">姿勢改善・美しい立ち姿</div>
-    <div class="menu__item">くびれ・ボディライン</div>
-    <div class="menu__item">疲れにくい身体づくり</div>
-    <div class="menu__item">使える身体づくり</div>
-  </div>
-</section>
-
-<!-- ===== 7. CORE BUILD ===== -->
-<section class="section mypage mypage--dark">
-  <p class="section__label">FOR MEN</p>
-  <h2 class="section__title">CORE BUILD</h2>
-  <div class="section__line"></div>
-  <p class="mypage__lead">力強く、創り上げる。</p>
-
-  <div class="menu menu--dark">
-    <div class="menu__item">ブレない身体を創る</div>
-    <div class="menu__item">姿勢・動作改善</div>
-    <div class="menu__item">痛くない身体づくり</div>
-    <div class="menu__item">使える身体づくり</div>
-  </div>
-</section>
-
-<!-- ===== 8. 施設紹介（設備アイコン修正版） ===== -->
-<section class="facility">
-  <p class="section__label">FACILITY</p>
-  <h2 class="section__title">施設紹介</h2>
-  <div class="section__line"></div>
-  <p class="section__lead">未来の自分を創る、秘密基地。</p>
-
-  <div class="facility__features">
-    <div class="facility__feature">
-      <div class="facility__feature-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="5" y="11" width="22" height="16" stroke-linejoin="round"/>
-          <path d="M5 11l11-6 11 6" stroke-linejoin="round"/>
-          <rect x="13" y="18" width="6" height="9" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <span class="facility__feature-text">完全個室／予約制</span>
-    </div>
-    <div class="facility__feature">
-      <div class="facility__feature-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="16" cy="8" r="3"/>
-          <path d="M16 11v8 M12 17l-2 8 M20 17l2 8 M14 26h4" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <span class="facility__feature-text">シャワー室</span>
-    </div>
-    <div class="facility__feature">
-      <div class="facility__feature-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M9 7h14v20H9z" stroke-linejoin="round"/>
-          <path d="M9 12h14 M16 7v20" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <span class="facility__feature-text">男女別 更衣室</span>
-    </div>
-    <div class="facility__feature">
-      <div class="facility__feature-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="5" y="9" width="22" height="14" rx="2"/>
-          <text x="16" y="20" text-anchor="middle" font-family="serif" font-size="9" fill="currentColor" stroke="none">P</text>
-        </svg>
-      </div>
-      <span class="facility__feature-text">駐車場20台（無料）</span>
-    </div>
-    <div class="facility__feature">
-      <div class="facility__feature-icon">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="3" y="13" width="3" height="6"/>
-          <rect x="6" y="11" width="2" height="10"/>
-          <line x1="8" y1="16" x2="24" y2="16" stroke-width="2"/>
-          <rect x="24" y="11" width="2" height="10"/>
-          <rect x="26" y="13" width="3" height="6"/>
-        </svg>
-      </div>
-      <span class="facility__feature-text">充実の機材</span>
-    </div>
-  </div>
-
-  <div class="facility__grid">
-    <img src="facility1.webp" alt="トレーニング機材全景" class="facility__img" loading="lazy">
-    <img src="facility2.webp" alt="ミラー付きトレーニングルーム" class="facility__img" loading="lazy">
-    <img src="facility4.webp" alt="シャワー室" class="facility__img" loading="lazy">
-    <img src="facility5.webp" alt="更衣室" class="facility__img" loading="lazy">
-  </div>
-</section>
-
-<!-- ===== 9. お客様の声 ===== -->
-<section class="voice" id="voice">
-  <p class="section__label">VOICE</p>
-  <h2 class="section__title">お客様の声</h2>
-  <div class="section__line"></div>
-
-  <p class="voice__lead">トレーニングで、<br>日常の楽しみがもっと楽しくなる。</p>
-  <div class="voice__list">
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">ライブ</div>
-        <div class="voice__name">30代 女性</div>
-      </div>
-      <p class="voice__text">
-        トレーニングを始めたきっかけは、好きなアーティストのライブを、これからもずっと楽しみたいという思いでした。<br><br>
-        県外までライブに出かけ、会場では飛び跳ねたり、旅行先を歩き回ったり。年齢を重ねても、そんな推し活を思いきり楽しめる体でいたい。そんな思いからトレーニングをスタート。<br><br>
-        数ヶ月後、実際にライブへ行ってみると、以前よりも体が動くようになり、翌日も思っていたほど疲れが残らず、そのまま観光を楽しむことができたそうです。
-      </p>
-    </div>
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">出張</div>
-        <div class="voice__name">30代 女性</div>
-      </div>
-      <p class="voice__text">
-        仕事で都会へ出張される方からも、嬉しい変化がありました。<br><br>
-        普段の生活では歩かないような距離を歩く出張。以前は足首やふくらはぎの痛みが気になっていたそうですが、トレーニングを始めてからは痛みが気になりにくくなり、思っていた以上に楽に歩けるように。<br><br>
-        体が疲れにくくなったことで、気分まで軽くなり、出張そのものをより快適に楽しめるようになったそうです。
-      </p>
-    </div>
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">M.Y</div>
-        <div class="voice__name">40代 女性</div>
-      </div>
-      <p class="voice__text">交通事故から肩がすごく痛かったけど、トレーニング始めてから全く痛くなくなりました。</p>
-    </div>
-
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">M.M</div>
-        <div class="voice__name">30代 女性</div>
-      </div>
-      <p class="voice__text">今まで1人でトレーニングしていたけど、トレーナーに見てもらうことで初めて正しいフォームを教えてもらって、めちゃめちゃ効果絶大でした！</p>
-    </div>
-
-    <div class="voice__card">
-      <div class="voice__head">
-        <div class="voice__icon">C.H</div>
-        <div class="voice__name">30代 女性</div>
-      </div>
-      <p class="voice__text">腰が結構痛かったんですが、トレーニングしていくとこんなに痛くなくなっていくのは、びっくりでした。</p>
-    </div>
-  </div>
-  <p class="voice__closing">
-    体を鍛えることは、ただ筋肉をつけることではない。<br>
-    好きなことを楽しむため。<br>
-    仕事や旅行をもっと快適に過ごすため。<br>
-    そして、これから先も<br>自分らしい人生を楽しみ続けるため。<br>
-    ONE-TREは、そんな日常の変化を大切にしています。
-  </p>
-</section>
-
-<!-- ===== 10. ABOUT 2部：なぜパーソナルトレーニングを始めたのか ===== -->
-<section class="about-message">
-  <h2 class="about-message__title">ボクシングジムと、<br>なぜパーソナルトレーニング？</h2>
-  <p class="about-message__subtitle">— なぜ、始めたのか。—</p>
-
-  <div class="about-message__body">
-    <p>
-      ボクシングジムを運営する中で、<br>
-      運動を始めたいという気持ちはあっても、<br>
-      体がついてこず、思うように運動ができない方を<br>
-      たくさん見てきました。
-    </p>
-    <p>
-      運動を始めても、すぐに疲れてしまう。<br>
-      体に負担がかかってしまう。<br>
-      思うように動けない。
-    </p>
-    <p>
-      その背景には、体を動かすための基礎となる<br>
-      筋力が不足していることもあると感じています。<br>
-      だからこそ、まずは体の土台をつくることが<br>
-      大切だと考えました。
-    </p>
-    <p>
-      私たちが考える基礎づくりとは、<br>
-      ただ筋肉をつけることではありません。<br>
-      どこかが痛くなることなく、疲れにくく、<br>
-      日常を快適に過ごせる体をつくること。
-    </p>
-    <p>
-      体幹や姿勢を整え、<br>
-      日常生活の中で疲れにくい体をつくる。<br>
-      そして、筋力・体幹・柔軟性・連動性を<br>
-      バランスよく高め、<br>
-      少しずつ自分の体を使えるようにしていく。
-    </p>
-    <p>
-      その人の体の状態やペースに合わせながら、<br>
-      トレーナーが一緒に体づくりをサポートします。<br>
-      ボクシングを通して知った体の使い方のメソッドを組み込んだ、<br>
-      ONE-TREだけの独自のトレーニングメニューです。
-    </p>
-    <p>
-      目指すのは、トレーニングのための体だけではありません。
-    </p>
-    <p>
-      好きなアーティストのコンサートを最後まで楽しめる。<br>
-      旅行先でたくさん歩いても、疲れが残りにくい。<br>
-      出張先でも、以前より軽やかに動ける。
-    </p>
-    <p>
-      実際に、トレーニングを始めた方から、<br>
-      そんな嬉しい声をいただくことがあります。
-    </p>
-    <p>
-      体が変われば、できることが増える。<br>
-      できることが増えれば、人生の楽しみも増えていく。<br>
-      私たちは、トレーニングを通して、<br>
-      皆さんが自分のやりたいことを<br>
-      思いきり楽しめる体づくりを目指しています。
-    </p>
-  </div>
-
-  <p class="about-message__close">
-    <strong>体を変えることは、<br>人生を楽しむための準備。</strong><br>
-    ONE-TREは、あなたが今よりもっと<br>
-    自分のことを好きになれるよう、<br>
-    体づくりをサポートします。
-  </p>
-</section>
-
-<!-- ===== 11. ABOUT 3部：プロフィール ===== -->
-<section class="about-profile">
-  <p class="section__label">PROFILE</p>
-  <h2 class="section__title">ONE-TREメソッド<br>考案者</h2>
-  <div class="section__line"></div>
-
-  <div class="about-profile__wrap">
-    <div class="about-profile__photo-wrap">
-      <img src="director.webp" alt="代表 長尾儀弘" class="about-profile__photo" loading="lazy">
-    </div>
-    <div class="about-profile__info">
-      <p class="about-profile__role">DIRECTOR</p>
-      <p class="about-profile__name-en">YOSHIHIRO NAGAO</p>
-      <p class="about-profile__name-jp">長 尾 儀 弘</p>
-
-      <div class="about-profile__bio">
-        <p class="about-profile__bio-label">CAREER</p>
-
-        <div class="about-profile__career-summary">
-          トレーニング歴 <strong>25年</strong><br>
-          トレーナー（指導）歴 <strong>20年</strong>
-        </div>
-
-        <p class="about-profile__bio-sublabel">BOXING ｜ ボクシング歴（大会実績）</p>
-        <ul class="about-profile__bio-list">
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2005</span>
-            <span>全日本実業団選手権 バンタム級 優勝</span>
-          </li>
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2006</span>
-            <span>全日本社会人選手権 バンタム級 優勝</span>
-          </li>
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2006</span>
-            <span>全日本実業団選手権 フェザー級 優勝＆MVP</span>
-          </li>
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2007</span>
-            <span>全日本実業団選手権 ライト級 優勝＆MVP</span>
-          </li>
-        </ul>
-
-        <!-- トロフィー写真（実績の証） -->
-        <div class="about-profile__trophy">
-          <img src="trophy.webp" alt="獲得トロフィー・実績の証" class="about-profile__trophy-img" loading="lazy">
-          <p class="about-profile__trophy-caption">— 実績の証 —</p>
-        </div>
-
-        <div class="about-profile__qualifications">
-          <span class="about-profile__qualifications-label">QUALIFICATIONS</span>
-          Essential Coaching 講師<br>
-          DiSC®アセスメント認定講師
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ===== トレーナー：稲田大地（G） ===== -->
-  <div class="about-profile__subhead">
-    <p class="section__label">STAFF</p>
-    <h2 class="section__title">担当トレーナー</h2>
-    <div class="section__line"></div>
-  </div>
-
-  <div class="about-profile__wrap about-profile__wrap--trainer">
-    <div class="about-profile__photo-wrap">
-      <img src="inada.webp" alt="トレーナー 稲田大地（G）" class="about-profile__photo" style="transform:scale(1.515);transform-origin:61.8% 80.9%" loading="lazy">
-    </div>
-    <div class="about-profile__info">
-      <p class="about-profile__role">TRAINER</p>
-      <p class="about-profile__name-en">G <span class="about-profile__nick">（ニックネーム）</span></p>
-      <p class="about-profile__name-jp">稲 田 大 地</p>
-
-      <div class="about-profile__bio">
-        <p class="about-profile__bio-label">CAREER</p>
-
-        <div class="about-profile__career-summary">
-          フィジカルトレーニング歴<br>
-          <strong>15年</strong>
-        </div>
-
-        <p class="about-profile__bio-sublabel">BOXING ｜ ボクシング歴（大会実績）</p>
-        <ul class="about-profile__bio-list">
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2012</span>
-            <span>全国高校総体 ライトウェルター級 出場</span>
-          </li>
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2013</span>
-            <span>全国高校総体 ライトウェルター級 出場</span>
-          </li>
-          <li class="about-profile__bio-item">
-            <span class="about-profile__bio-year">2013</span>
-            <span>全国高校総体 中国大会 ライトウェルター級 準優勝</span>
-          </li>
-        </ul>
-
-        <div class="about-profile__message">
-          <p class="about-profile__message-lead">トレーニングが初めてでも、<br>安心して始められます。</p>
-          <p>
-            体を動かすことが大好きなトレーナーです。<br>
-            ボクシングで鍛えた確かなパワーに加えて、<br>
-            柔軟性と俊敏性も兼ね備えています。
-          </p>
-          <p>
-            体がどう動くかを体感で理解しているので、<br>
-            ただ引き締めるだけではなく、<br>
-            「ちゃんと動ける体」をつくりながら<br>
-            引き締めていきます。
-          </p>
-          <p>
-            「本当に優しい人です」<br>
-            会員さんから、よくいただくお声です。<br>
-            トレーニング中の声かけや励ましで、<br>
-            モチベーションを上げてくれるトレーナーです。
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 12. 料金 ===== -->
-<section class="section price" id="price">
-  <p class="section__label">PRICE</p>
-  <h2 class="section__title">料金</h2>
-  <div class="section__line"></div>
-  <p class="price__note">1回50分／男女共通</p>
-
-  <div class="price__campaign">
-    <p class="price__campaign-badge">CAMPAIGN</p>
-    <p class="price__campaign-title">今だけ、入会金 <span class="price__campaign-strike">¥11,000</span> → <span class="price__campaign-free">¥0</span></p>
-    <p class="price__campaign-sub">定員に達し次第、予告なく終了します</p>
-        <p class="price__campaign-sub">※特別価格は初回ご入会の方のみ対象です。</p>
-  </div>
-
-  <div class="price__list">
-    <div class="price__card">
-      <div class="price__card-row">
-        <span class="price__count">8回</span>
-        <div class="price__card-inner">
-          <span class="price__off">人数限定 10%OFF</span>
-          <span class="price__amount-strike">¥49,800</span>
-          <span class="price__amount price__amount--campaign">¥44,820</span>
-          <span class="price__save">¥4,980お得</span>
-          <span class="price__per">1回あたり 約¥5,600</span>
-        </div>
-      </div>
-      <p class="price__pace">週1回 × 約2ヶ月</p>
-    </div>
-    <div class="price__card price__card--recommend">
-      <span class="price__badge">RECOMMEND</span>
-      <div class="price__card-row">
-        <span class="price__count">16回</span>
-        <div class="price__card-inner">
-          <span class="price__off">人数限定 10%OFF</span>
-          <span class="price__amount-strike">¥94,800</span>
-          <span class="price__amount price__amount--campaign">¥85,320</span>
-          <span class="price__save">¥9,480お得</span>
-          <span class="price__per">1回あたり 約¥5,300</span>
-        </div>
-      </div>
-      <p class="price__pace">週1回 × 約4ヶ月で確実な変化を</p>
-    </div>
-    <div class="price__card">
-      <div class="price__card-row">
-        <span class="price__count">32回</span>
-        <div class="price__card-inner">
-          <span class="price__off">人数限定 10%OFF</span>
-          <span class="price__amount-strike">¥178,000</span>
-          <span class="price__amount price__amount--campaign">¥160,200</span>
-          <span class="price__save">¥17,800お得</span>
-          <span class="price__per">1回あたり 約¥5,000</span>
-        </div>
-      </div>
-      <p class="price__pace">週1回 × 約8ヶ月で理想を日常に</p>
-    </div>
-    <div class="price__pair">
-      <p class="price__pair-label">PAIR DISCOUNT</p>
-      <p class="price__pair-text">ペア割 <span class="price__pair-em">さらに20%オフ</span></p>
-      <p class="price__pair-sub">お友達・ご家族と2人同時受講の場合に適用</p>
-    </div>
-   <p class="price__entry">
-      入会金 <span class="price__entry-strike">¥11,000</span><span class="price__entry-free">今だけ ¥0</span>
-    </p>
-    <p class="price__no-push">— 無理な勧誘は、一切ありません。—</p>
-    <div class="price__payment">
-      <p class="price__payment-label">PAYMENT</p>
-      <p class="price__payment-list">VISA / Master / JCB / AMEX<br>PayPay / J-Coin Pay</p>
-    </div>
-  </div>
-</section>
-<!-- ===== 会員の流れ ===== -->
 <section class="exp" id="member">
   <p class="section__label">MEMBER FLOW</p>
   <h2 class="section__title">通い始めたら、<br>"気になる"を解消。</h2>
@@ -1905,7 +1570,259 @@ body.menu-open { overflow: hidden; }
   </div>
 
 </section>
-  <!-- ===== 12. Q&A ===== -->
+
+<section class="section price" id="price">
+  <p class="section__label">PRICE</p>
+  <h2 class="section__title">料金</h2>
+  <div class="section__line"></div>
+  <p class="price__note">1回50分／男女共通</p>
+
+  <div class="nx-price-trial"><p>はじめての体験（約40分）</p><p class="nx-price-trial__yen">3,300円</p><p>カウンセリング → 体験 → ご案内</p></div>
+
+  <div class="price__campaign">
+    <p class="price__campaign-badge">CAMPAIGN</p>
+    <p class="price__campaign-title">今だけ、入会金 <span class="price__campaign-strike">¥11,000</span> → <span class="price__campaign-free">¥0</span></p>
+    <p class="price__campaign-sub">定員に達し次第、予告なく終了します</p>
+        <p class="price__campaign-sub">※特別価格は初回ご入会の方のみ対象です。</p>
+  </div>
+
+  <div class="price__list">
+    <div class="price__card">
+      <div class="price__card-row">
+        <span class="price__count">8回</span>
+        <div class="price__card-inner">
+          <span class="price__off">人数限定 10%OFF</span>
+          <span class="price__amount-strike">¥49,800</span>
+          <span class="price__amount price__amount--campaign">¥44,820</span>
+          <span class="price__save">¥4,980お得</span>
+          <span class="price__per">1回あたり 約¥5,600</span>
+        </div>
+      </div>
+      <p class="price__pace">週1回 × 約2ヶ月</p>
+    </div>
+    <div class="price__card price__card--recommend">
+      <span class="price__badge">RECOMMEND</span>
+      <div class="price__card-row">
+        <span class="price__count">16回</span>
+        <div class="price__card-inner">
+          <span class="price__off">人数限定 10%OFF</span>
+          <span class="price__amount-strike">¥94,800</span>
+          <span class="price__amount price__amount--campaign">¥85,320</span>
+          <span class="price__save">¥9,480お得</span>
+          <span class="price__per">1回あたり 約¥5,300</span>
+        </div>
+      </div>
+      <p class="price__pace">週1回 × 約4ヶ月で確実な変化を</p>
+    </div>
+    <div class="price__card">
+      <div class="price__card-row">
+        <span class="price__count">32回</span>
+        <div class="price__card-inner">
+          <span class="price__off">人数限定 10%OFF</span>
+          <span class="price__amount-strike">¥178,000</span>
+          <span class="price__amount price__amount--campaign">¥160,200</span>
+          <span class="price__save">¥17,800お得</span>
+          <span class="price__per">1回あたり 約¥5,000</span>
+        </div>
+      </div>
+      <p class="price__pace">週1回 × 約8ヶ月で理想を日常に</p>
+    </div>
+    <div class="price__pair">
+      <p class="price__pair-label">PAIR DISCOUNT</p>
+      <p class="price__pair-text">ペア割 <span class="price__pair-em">さらに20%オフ</span></p>
+      <p class="price__pair-sub">お友達・ご家族と2人同時受講の場合に適用</p>
+    </div>
+   <p class="price__entry">
+      入会金 <span class="price__entry-strike">¥11,000</span><span class="price__entry-free">今だけ ¥0</span>
+    </p>
+    <p class="price__no-push">— 無理な勧誘は、一切ありません。—</p>
+    <div class="price__payment">
+      <p class="price__payment-label">PAYMENT</p>
+      <p class="price__payment-list">VISA / Master / JCB / AMEX<br>PayPay / J-Coin Pay</p>
+    </div>
+  </div>
+<div class="nx-cta"><a href="https://onebalanceyume-beep.github.io/private-gym-trainer/taiken_yoyaku.html" target="_blank" rel="noopener">体験予約（約40分・3,300円）→</a></div>
+<p class="nx-tel">お電話でのお問い合わせ<br><a href="tel:0859495275">0859-49-5275</a></p>
+</section>
+
+<section class="facility">
+  <p class="section__label">FACILITY</p>
+  <h2 class="section__title">施設紹介</h2>
+  <div class="section__line"></div>
+  <p class="section__lead">未来の自分を創る、秘密基地。</p>
+
+  <div class="facility__features">
+    <div class="facility__feature">
+      <div class="facility__feature-icon">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="5" y="11" width="22" height="16" stroke-linejoin="round"/>
+          <path d="M5 11l11-6 11 6" stroke-linejoin="round"/>
+          <rect x="13" y="18" width="6" height="9" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="facility__feature-text">完全個室／予約制</span>
+    </div>
+    <div class="facility__feature">
+      <div class="facility__feature-icon">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="16" cy="8" r="3"/>
+          <path d="M16 11v8 M12 17l-2 8 M20 17l2 8 M14 26h4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="facility__feature-text">シャワー室</span>
+    </div>
+    <div class="facility__feature">
+      <div class="facility__feature-icon">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 7h14v20H9z" stroke-linejoin="round"/>
+          <path d="M9 12h14 M16 7v20" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="facility__feature-text">男女別 更衣室</span>
+    </div>
+    <div class="facility__feature">
+      <div class="facility__feature-icon">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="5" y="9" width="22" height="14" rx="2"/>
+          <text x="16" y="20" text-anchor="middle" font-family="serif" font-size="9" fill="currentColor" stroke="none">P</text>
+        </svg>
+      </div>
+      <span class="facility__feature-text">駐車場20台（無料）</span>
+    </div>
+    <div class="facility__feature">
+      <div class="facility__feature-icon">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="13" width="3" height="6"/>
+          <rect x="6" y="11" width="2" height="10"/>
+          <line x1="8" y1="16" x2="24" y2="16" stroke-width="2"/>
+          <rect x="24" y="11" width="2" height="10"/>
+          <rect x="26" y="13" width="3" height="6"/>
+        </svg>
+      </div>
+      <span class="facility__feature-text">充実の機材</span>
+    </div>
+  </div>
+
+  <div class="facility__grid">
+    <img src="facility1.webp" alt="トレーニング機材全景" class="facility__img" loading="lazy">
+    <img src="facility2.webp" alt="ミラー付きトレーニングルーム" class="facility__img" loading="lazy">
+  </div>
+</section>
+
+<section class="entrance-section">
+  <p class="section__label">ENTRANCE</p>
+  <h2 class="section__title">ジムへの、入口。</h2>
+  <div class="section__line"></div>
+  <p class="section__lead">
+    ボクシングジムの一角に、<br>
+    隠れ家のように佇む完全個室。
+  </p>
+
+  <div class="entrance__grid">
+    <div class="entrance__item entrance__item--main">
+      <img src="entrance.webp" alt="ジムへの入口" class="entrance__img" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="about-profile" id="director">
+  <p class="section__label">PROFILE</p>
+  <h2 class="section__title">ONE-TREメソッド<br>考案者</h2>
+  <div class="section__line"></div>
+
+  <div class="about-profile__wrap">
+    <div class="about-profile__photo-wrap">
+      <img src="director.webp" alt="代表 長尾儀弘" class="about-profile__photo" loading="lazy">
+    </div>
+    <div class="about-profile__info">
+      <p class="about-profile__role">DIRECTOR</p>
+      <p class="about-profile__name-en">YOSHIHIRO NAGAO</p>
+      <p class="about-profile__name-jp">長 尾 儀 弘</p>
+
+      <div class="about-profile__bio">
+        <p class="about-profile__bio-label">CAREER</p>
+
+        <div class="about-profile__career-summary">
+          トレーニング歴 <strong>25年</strong><br>
+          トレーナー（指導）歴 <strong>20年</strong>
+        </div>
+
+        <p class="about-profile__bio-sublabel">BOXING ｜ ボクシング歴（大会実績）</p>
+        <ul class="about-profile__bio-list">
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2005</span>
+            <span>全日本実業団選手権 バンタム級 優勝</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2006</span>
+            <span>全日本社会人選手権 バンタム級 優勝</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2006</span>
+            <span>全日本実業団選手権 フェザー級 優勝＆MVP</span>
+          </li>
+          <li class="about-profile__bio-item">
+            <span class="about-profile__bio-year">2007</span>
+            <span>全日本実業団選手権 ライト級 優勝＆MVP</span>
+          </li>
+        </ul>
+
+        <!-- トロフィー写真（実績の証） -->
+        <div class="about-profile__trophy">
+          <img src="trophy.webp" alt="獲得トロフィー・実績の証" class="about-profile__trophy-img" loading="lazy">
+          <p class="about-profile__trophy-caption">— 実績の証 —</p>
+        </div>
+
+        <div class="about-profile__qualifications">
+          <span class="about-profile__qualifications-label">QUALIFICATIONS</span>
+          Essential Coaching 講師<br>
+          DiSC®アセスメント認定講師
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-message">
+  <h2 class="about-message__title">ボクシングジムと、<br>なぜパーソナルトレーニング？</h2>
+  <p class="about-message__subtitle">— なぜ、始めたのか。—</p>
+
+  <div class="about-message__body">
+    <p>
+      ボクシングジムを運営する中で、<br>
+      運動を始めたいという気持ちはあっても、<br>
+      体がついてこず、思うように運動ができない方を<br>
+      たくさん見てきました。
+    </p>
+    <p>
+      その背景には、体を動かすための基礎となる<br>
+      筋力が不足していることもあると感じています。<br>
+      だからこそ、まずは体の土台をつくることが<br>
+      大切だと考えました。
+    </p>
+    <p>
+      その人の体の状態やペースに合わせながら、<br>
+      トレーナーが一緒に体づくりをサポートします。<br>
+      ボクシングを通して知った体の使い方のメソッドを組み込んだ、<br>
+      ONE-TREだけの独自のトレーニングメニューです。
+    </p>
+    <p>
+      体が変われば、できることが増える。<br>
+      できることが増えれば、人生の楽しみも増えていく。<br>
+      私たちは、トレーニングを通して、<br>
+      皆さんが自分のやりたいことを<br>
+      思いきり楽しめる体づくりを目指しています。
+    </p>
+  </div>
+
+  <p class="about-message__close">
+    <strong>体を変えることは、<br>人生を楽しむための準備。</strong><br>
+    ONE-TREは、あなたが今よりもっと<br>
+    自分のことを好きになれるよう、<br>
+    体づくりをサポートします。
+  </p>
+</section>
+
 <section class="faq" id="faq">
   <p class="section__label">Q&A</p>
   <h2 class="section__title">よくあるご質問</h2>
@@ -1919,7 +1836,7 @@ body.menu-open { overflow: hidden; }
       </div>
       <div class="faq__a">
         <span class="faq__a-mark">A.</span>
-        <p class="faq__a-text">まずは、姿勢改善のための体幹トレーニングを、当ジム独自のフィジカル体幹メニューで行います。あわせて、ヒップアップ（お尻・体のライン・脚の引き締め）を中心にご案内します。鍛えたい場所などのご希望があれば、メニューの変更ももちろん可能です。</p>
+        <p class="faq__a-text">まずは、姿勢改善のための体幹トレーニングを、当ジム独自のフィジカル体幹メニューで行います。あわせて、ヒップアップ（お尻・体のライン・脚の引き締め）を中心にご案内します。鍛えたい場所などのご希望があれば、メニューの変更ももちろん可能です。体験は約40分、3,300円です。</p>
       </div>
     </div>
     <div class="faq__item">
@@ -2082,6 +1999,7 @@ body.menu-open { overflow: hidden; }
   </svg>
   Googleマップで道順を見る →
 </a>
+<p class="nx-tel">TEL <a href="tel:0859495275">0859-49-5275</a></p>
 </section>
 
 <footer class="footer">
@@ -2105,26 +2023,6 @@ body.menu-open { overflow: hidden; }
   体験予約 →
 </a>
 
-<script>
-(function() {
-  const slides = [
-    document.getElementById('slide1'),
-    document.getElementById('slide2'),
-    document.getElementById('slide3')
-  ];
-  const images = ['facility1.webp', 'facility2.webp', 'logo_sign.webp'];
-  slides.forEach((slide, i) => {
-    slide.style.backgroundImage = `url(${images[i]})`;
-  });
-
-  let current = 0;
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 5000);
-})();
-</script>
 
 </body>
 </html>
